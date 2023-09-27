@@ -1,0 +1,19 @@
+.divCardMovie{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+    
+}
+
+.cardMovie{
+    width: 101px;
+    height: 141px;
+   
+    left: 40px;
+    
+
+}
+
