@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import getData from "../Api";
+import {getPopularMovie} from "../Api";
 import Card from "../components/Card";
 
 
 export default function Home() {
+    
     const [results, setResults] = useState([]);
 
     useEffect(() => {
         // Dentro de useEffect para que se ejecute después de la renderización
-        getData().then((response) => {
+        getPopularMovie().then((response) => {
             setResults(response.results);
             console.log("peliculas", response.results);
         })
@@ -19,7 +20,9 @@ export default function Home() {
 
     return (
         <div>
-            {/* Renderiza los resultados aquí */}
-        </div>
-    );
+        {results.length <= 0 ? null : results.map((item) => <Card movie={item} key={item.id}  />)}
+    
+    </div>
+        
+        )
 }
