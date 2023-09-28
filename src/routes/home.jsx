@@ -4,7 +4,7 @@ import Card from "../components/Card";
 
 
 export default function Home() {
-    
+    //variables de estado
     const [results, setResults] = useState([]);
 
     useEffect(() => {

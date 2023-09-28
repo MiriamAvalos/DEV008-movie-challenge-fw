@@ -1,19 +1,31 @@
-.divCardMovie{
+*{
+    margin:0px;
+    box-sizing: border-box;
+    
+}
+
+
+
+#root{
+    padding: 0px;
     display:flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 90px;
     
-
-    
+}
+.DivCardMovie{
+    display:inline-flex; 
     
 }
 
-.cardMovie{
-    width: 101px;
-    height: 141px;
-   
-    left: 40px;
+.imgMovie{
+    margin:2px;
+    padding:3px;
+    width: 123px;
+    height: 165px;
+    transition: transform 0.3s ease;
     
-
 }
 
+.imgMovie:hover {
+    transform: scale(1.05);
+}
