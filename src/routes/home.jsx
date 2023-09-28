@@ -16,7 +16,7 @@ export default function Home() {
            // Agregamos un retraso artificial para que el indicador de carga sea visible
         setTimeout(() => {
             setLoading(false); // Cuando los datos se cargan, establece loading en false
-          }, 1000); // Retraso de 1 segundo (ajusta según tus necesidades)
+          }, 700); // Retraso de 1 segundo (ajusta según tus necesidades)
         })
             //console.log("peliculas", response.results);
         
