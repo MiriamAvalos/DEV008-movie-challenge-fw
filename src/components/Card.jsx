@@ -10,6 +10,7 @@ function Card(props) {
             <img className= "imgMovie" src={image}/>
             
         </div>
+       
     )
 }
 
