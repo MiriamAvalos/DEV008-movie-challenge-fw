@@ -7,14 +7,16 @@ import SearchBar from '../components/SearchBar';
 
 export default function Home() {
     //variables de estado
-    const [results, setResults] = useState([]);
+    const [allMovies, setAllMovies] = useState([]); //todas las peliculas sin filtrar
     const [loading, setLoading] = useState(true); 
     const [searchText, setSearchText] = useState("")
 
     useEffect(() => {
         // Dentro de useEffect para que se ejecute después de la renderización
         getPopularMovie().then((response) => {
-            setResults(response.results);
+         
+      setAllMovies(allMovies);
+            setAllMovies(response.results);
            // Agregamos un retraso artificial para que el indicador de carga sea visible
         setTimeout(() => {
             setLoading(false); // Cuando los datos se cargan, establece loading en false
@@ -27,6 +29,18 @@ export default function Home() {
         });
     }, []);// Usamos un arreglo vacío para que se ejecute solo una vez después de la renderización inicial
 
+
+     //función para manejar la busqueda
+     const handleSearch = () =>{
+
+     
+     const filterMovies = allMovies.filter((movie)=>
+     movie.title.toLowerCase().includes(searchText.toLocaleLowerCase())
+     );
+     
+    //actualiza el estado con peliculas filtradas
+    setAllMovies(filterMovies);
+     };
     return (
         <div>
           {loading ? (
@@ -35,12 +49,14 @@ export default function Home() {
           ) : (
             // Muestra la lista de películas si loading es false
             <div>
-                <SearchBar value={searchText} handleChange={setSearchText}/>
+                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
 
-              {results.length <= 0 ? null : results.map((item) => <Card movie={item} key={item.id}  />)}
+              {allMovies.length <= 0 ? null : allMovies.map((item) => <Card movie={item} key={item.id}  />)}
     
     </div>
      )}
      </div>
    );
+
+   
  }
