@@ -73,7 +73,7 @@ console.log(valueTextUser)
           ) : (
             // Muestra la lista de películas si loading es false
             <div>
-                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
+                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
 
               {allMovies.length <= 0 ? null : allMovies.map((item) => <Card movie={item} key={item.id}  />)}
     
