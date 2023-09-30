@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {getPopularMovie} from "../Api";
+import {getPopularMovie, searchAllMovies } from "../Api";
 import Card from "../components/Card";
 import Loading from '../components/Loading';
 import SearchBar from '../components/SearchBar';
@@ -10,13 +10,14 @@ export default function Home() {
     const [allMovies, setAllMovies] = useState([]); //todas las peliculas sin filtrar
     const [loading, setLoading] = useState(true); 
     const [searchText, setSearchText] = useState("")
+    const [searchResults, setSearchResults ] = useState([])
 
     useEffect(() => {
         // Dentro de useEffect para que se ejecute después de la renderización
         getPopularMovie().then((response) => {
          
-      setAllMovies(allMovies);
-            setAllMovies(response.results);
+      //setAllMovies(allMovies);
+            setAllMovies(response.results); //results es la propiedad del objeto response
            // Agregamos un retraso artificial para que el indicador de carga sea visible
         setTimeout(() => {
             setLoading(false); // Cuando los datos se cargan, establece loading en false
@@ -31,16 +32,39 @@ export default function Home() {
 
 
      //función para manejar la busqueda
-     const handleSearch = () =>{
-
-     
-     const filterMovies = allMovies.filter((movie)=>
-     movie.title.toLowerCase().includes(searchText.toLocaleLowerCase())
-     );
-     
+     const handleSearch = (valueTextUser) =>{
+      console.log(valueTextUser)
+      setSearchText(valueTextUser)
+      console.log(searchText)
+      
+console.log(valueTextUser)
     //actualiza el estado con peliculas filtradas
-    setAllMovies(filterMovies);
-     };
+    if (valueTextUser === ""){
+      getPopularMovie().then((response) => {
+         
+        //setAllMovies(allMovies);
+              setAllMovies(response.results); //results es la propiedad del objeto response
+             // Agregamos un retraso artificial para que el indicador de carga sea visible
+          setTimeout(() => {
+              setLoading(false); // Cuando los datos se cargan, establece loading en false
+            }, 700); // Retraso de tiempo
+          })
+              //console.log("peliculas", response.results);
+          
+          .catch((error) => {
+              console.error("Error al obtener los datos:", error);
+          });
+    } else{
+    searchAllMovies(searchText).then((response) => { 
+    setAllMovies(response.results)
+         console.log(searchResults)
+    }
+      )
+
+      }
+    }
+
+
     return (
         <div>
           {loading ? (
@@ -57,6 +81,4 @@ export default function Home() {
      )}
      </div>
    );
-
-   
  }
