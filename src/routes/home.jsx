@@ -103,9 +103,11 @@ export default function Home() {
                 <div className="contentImageHeader">
                 <img src={imageShowTuman} className='imageShowTruman' />
                 <p className="welcome">¡Bienvenidxs!</p>
-                <h2 className="description">El sitio donde
-                  encontrarás millones de películas y series
-                  por descubrir...
+                <h2 className="description">El sitio donde <br></br>
+                  encontrarás información de <br></br>
+                   miles de películas y series.
+                   
+                  <br></br>¡Comienza a explorar ahora! 
                 </h2>
                 </div>
                 <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>

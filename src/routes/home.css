@@ -15,7 +15,7 @@
 }
 
 .welcome{
-    margin-top: 10px;
+    margin-top: 20px;
     left: 10px;
     font-family: 'Gilroy-Light';
     position: absolute;
@@ -25,11 +25,13 @@
 }
 
 .description{
-    font-size: 25px;
-    right: 35px;
+    font-size: 24px;
     margin-top: 70px;
     font-family: 'Gilroy-Light';
     position:absolute;
     color: antiquewhite;
+    line-height: 1; 
+    text-align: left;
+    left: 10px;
 
 }
