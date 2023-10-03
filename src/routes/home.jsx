@@ -9,10 +9,10 @@ import SearchBar from '../components/SearchBar';
 export default function Home() {
     //variables de estado
     const [allMovies, setAllMovies] = useState([]); //todas las peliculas sin filtrar
-    const [loading, setLoading] = useState(true); 
-    const [searchText, setSearchText] = useState("")
-    const [searchResults, setSearchResults ] = useState([])
-    const [page, setPage] = useState(1)
+    const [loading, setLoading] = useState(true);  //estado para loading
+    const [searchText, setSearchText] = useState("") 
+    const [searchResults, setSearchResults ] = useState([])  
+    const [page, setPage] = useState(1)  //estado para paginación
 
     useEffect(() => {
         // Dentro de useEffect para que se ejecute después de la renderización
@@ -39,7 +39,7 @@ export default function Home() {
       setSearchText(valueTextUser)
       console.log(searchText)
       
-console.log(valueTextUser)
+     console.log(valueTextUser)
     //actualiza el estado con peliculas filtradas
     if (valueTextUser === ""){
       getPopularMovie().then((response) => {
@@ -67,7 +67,7 @@ console.log(valueTextUser)
     }
 
 
-
+    //función para button ver más , suma 20
     const onClickVerMas = () => {
       
       console.log(page)
@@ -102,8 +102,6 @@ console.log(valueTextUser)
                 <Header />
 
               {allMovies.length <= 0 ? null : allMovies.map((item) => <Card movie={item} key={item.id}  />)}
-
-             
 
               <button onClick={onClickVerMas}>ver más</button>
     </div>

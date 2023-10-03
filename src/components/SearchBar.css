@@ -1,20 +1,27 @@
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('../fuentes/Gilroy-Light.otf');
+  font-weight: normal; /* Puedes ajustar el peso de la fuente si es necesario */
+  font-style: normal; /* Puedes ajustar el estilo de la fuente si es necesario */
+}
+
 .contentSearchBar{
     display: flex;
     align-items: center;
     justify-content: center;
     margin:2px;
+    
 }
 
 .inputSearchMovies{
-    
-    padding: 10px;
+  padding: 10px;
   width: 200px;
   height: 34px;
   border: 1px solid #f7f3f3;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   outline: none;
-  font-family: roboto;
+  font-family:  'Gilroy-Light';
 }
 
 .imageSearch{
