@@ -1,5 +1,5 @@
 import './SearchBar.css';
-import imagenBusqueda from '../images/search.png';
+import imageBusqueda from '../images/search.png';
 
 import { useState } from "react";
 
@@ -23,11 +23,9 @@ export default function SearchBar(props) {
     return (
        <div className='contentSearchBar'>
 
-
-      
       <input type="text" placeholder="Buscar una película..." className="inputSearchMovies" onChange={event=>handleChange(event)} value={searchValue} />
       
-      <img src={imagenBusqueda} onClick={handleClick} className='imageSearch' />
+      <img src={imageBusqueda} onClick={handleClick} className='imageSearch' />
       
        </div>
 

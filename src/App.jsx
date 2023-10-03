@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from "./routes/home";
+import { Movie } from "./components/Movie";
 
 
 
@@ -20,6 +21,9 @@ function App() {
           {/* <Route path="Peliculas" element={<Blogs />} />
           <Route path="Series" element={<Contact />} />
           <Route path="Detalles" element={<NoPage />} /> */}
+        </Route>
+        <Route path="/movie-description" element={<Movie />}>
+
         </Route>
       </Routes>
     </BrowserRouter>

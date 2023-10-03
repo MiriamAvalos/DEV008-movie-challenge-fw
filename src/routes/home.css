@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fuentes/Gilroy-Light.otf');
+   
+  }
+
+.contentImageHeader{
+    display: flex;
+}
+.imageShowTruman{
+    margin-top: 2px;
+    width: 100%;
+    height: auto;
+   
+}
+
+.welcome{
+    margin-top: 10px;
+    left: 10px;
+    font-family: 'Gilroy-Light';
+    position: absolute;
+    color: antiquewhite;
+    font-size: 30px;
+    
+}
+
+.description{
+    font-size: 25px;
+    right: 35px;
+    margin-top: 70px;
+    font-family: 'Gilroy-Light';
+    position:absolute;
+    color: antiquewhite;
+
+}

@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import Card from "../components/Card";
 import Loading from '../components/Loading';
 import SearchBar from '../components/SearchBar';
+import imageShowTuman from '../images/showtruman.jpg';
+import './home.css';
 
 
 export default function Home() {
@@ -97,13 +99,30 @@ export default function Home() {
             // Muestra la lista de películas si loading es false
             <div>
 
-              
-                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
                 <Header />
+                <div className="contentImageHeader">
+                <img src={imageShowTuman} className='imageShowTruman' />
+                <p className="welcome">¡Bienvenidxs!</p>
+                <h2 className="description">El sitio donde
+                  encontrarás millones de películas y series
+                  por descubrir...
+                </h2>
+                </div>
+                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+                
+                
+          
+              {allMovies.length <= 0 
+              ? <p>no se encontraron resultados</p> 
+              :  <>
+              {allMovies.map((item) => <Card movie={item} key={item.id}  />)}
+              <button onClick={onClickVerMas}>ver más</button> 
+              </>
+                            
 
-              {allMovies.length <= 0 ? null : allMovies.map((item) => <Card movie={item} key={item.id}  />)}
-
-              <button onClick={onClickVerMas}>ver más</button>
+              }
+              
+              
     </div>
      )}
      </div>

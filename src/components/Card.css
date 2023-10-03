@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0px;
     box-sizing: border-box;
     
@@ -9,11 +9,12 @@
 #root{
     padding: 0px;
     display:flex;
-    margin-top: 90px;
+    margin-top: 0px;
     
 }
 .DivCardMovie{
     display:inline-flex; 
+    margin-top: 5px;
     
 }
 
@@ -23,6 +24,7 @@
     width: 110px;
     height: 165px;
     transition: transform 0.3s ease;
+    cursor: pointer;
     
 }
 
