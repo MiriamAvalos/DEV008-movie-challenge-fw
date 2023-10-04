@@ -12,7 +12,7 @@ function Card(props) {
      
         
     }
-
+     console.log(props.movie.genre_ids)
   //const titulo = props.movie.title;
   const image = "https://image.tmdb.org/t/p/w200" + props.movie.poster_path
   //console.log("titulo" , titulo);

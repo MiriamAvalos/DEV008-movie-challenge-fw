@@ -7,8 +7,8 @@ import './Movie.css';
 export function Movie() {
     const {state} = useLocation()  //useLocation devuelve todas las opciones del componente al que navegamos
     console.log(state)
-    const imageBackdropPath = "https://image.tmdb.org/t/p/w200" + state.backdrop_path
-    const imagePosterPath = "https://image.tmdb.org/t/p/w200"  + state.poster_path
+    const imageBackdropPath = "https://image.tmdb.org/t/p/w1280" + state.backdrop_path
+    const imagePosterPath = "https://image.tmdb.org/t/p/w1280"  + state.poster_path
 
 
     const Navigate = useNavigate()  //todos los hooks comienzan con "use", los hooks son funciones que nos retornan algo
@@ -20,7 +20,7 @@ export function Movie() {
         
     }
 
-
+      
   return (
     <div className="divComponentMovie">
     
