@@ -1,17 +1,28 @@
 @font-face {
     font-family: 'Gilroy-ExtraBold';
     src: url('../fuentes/Gilroy-ExtraBold.otf');
-    font-weight: normal; /* Puedes ajustar el peso de la fuente si es necesario */
-    font-style: normal; /* Puedes ajustar el estilo de la fuente si es necesario */
+    
+  }
+
+  @font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fuentes/Gilroy-Light.otf');
+    
   }
 .divComponentMovie{
-
 display:flex;
   
 }
+.closeDescription{
+    position:absolute;
+    z-index: 2;
+    left: 265px;
+    margin-top: 5px;
+    
+}
 .imageBackdropPath{
    position:absolute;
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
     height: 190px;
     filter: brightness(0.8);
@@ -20,9 +31,9 @@ display:flex;
 
 .imagePosterPath{
     position: absolute;
-    left: 205px;
-    margin-top:200px;
-    width: 155px;
+    left: 199px;
+    margin-top:210px;
+    width: 165px;
     height: 245px;
     z-index: 2;
 }
@@ -30,8 +41,41 @@ display:flex;
 .titleMovieDescription{
 position: absolute;
 font-family: 'Gilroy-ExtraBold';
-font-size: 25px;
-margin-top: 230px;
-left: 25px;
+font-size: 20px;
+margin-top: 260px;
+left: 5px;
 color: rgb(19, 22, 85);
+text-align: left;
 }
+
+.releaseDate{
+    position:absolute;
+    font-family: 'Gilroy-Light';
+    margin-top: 295px;
+    left: 50px;
+    color: black;
+
+}
+
+.overviewTitle{
+position: absolute;
+font-family: 'Gilroy-ExtraBold';
+font-size: 18px;
+margin-top: 480px;
+text-align: left;
+left: 40px;
+color: rgb(19, 22, 85);
+
+}
+
+.overviewMovie{
+    position: absolute;
+    font-family: 'Gilroy-Light';
+    margin-top: 510px;
+    text-align: left;
+    font-size: 17px;
+    left: 8px;
+    padding: 1px;
+    color: black;
+}
+
