@@ -18,6 +18,7 @@ export default function Home() {
     const [page, setPage] = useState(1)  //estado para paginación
     const [genreSelect, setGenreSelect] = useState() //estado para generos 
     const [genreFilter, setGenreFilter] = useState([]); // Estado para las películas filtradas por género
+    
 
 
    
@@ -30,6 +31,12 @@ export default function Home() {
     // Puedes realizar otras acciones con genreFilter aquí si es necesario.
   
   }, [genreSelect, allMovies]); // Ahora se ejecutará cuando genreSelect o allMovies cambien
+
+   // Función para restablecer el filtro
+   const resetFilter = () => {
+    setGenreSelect(0); // Restablece el filtro de género a su estado inicial (0 o el valor que uses)
+    setSearchText(""); // Limpia el campo de búsqueda si es necesario
+  };
   
 
 
@@ -53,7 +60,8 @@ export default function Home() {
 
 
     
-
+ 
+   
 
 
 
@@ -143,12 +151,15 @@ export default function Home() {
 
 
 
-                <SelectGenres setGenreSelect={setGenreSelect} />
+               
 
 {/* Muestra las películas filtradas */}
 {genreFilter.length > 0 ? (
   <>
-    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
+
+{/* Agrega un botón o enlace para restablecer el filtro */}
+<button onClick={resetFilter}>Restablecer Filtro</button>
    <p>resultados de su busqueda: </p> 
    {genreFilter.map((item) => (
     <Card movie={item} key={item.id} />
@@ -159,6 +170,11 @@ export default function Home() {
 ) : (
   <>
    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+   {/* Resto de tu código */}
+   <SelectGenres setGenreSelect={setGenreSelect} />
+
+{/* Agrega un botón o enlace para restablecer el filtro */}
+<button onClick={resetFilter}>Restablecer Filtro</button>
                 
                 
           

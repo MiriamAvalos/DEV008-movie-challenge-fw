@@ -20,6 +20,8 @@ export default function SearchBar(props) {
         console.log(valueSearch)
         props.handleSearch()
     }
+
+    
     return (
        <div className='contentSearchBar'>
 
