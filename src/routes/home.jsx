@@ -16,22 +16,21 @@ export default function Home() {
     const [searchText, setSearchText] = useState("") 
     const [searchResults, setSearchResults ] = useState([])  
     const [page, setPage] = useState(1)  //estado para paginación
-    const [genreSelect, setGenreSelect] = useState(0) //estado para generos 
+    const [genreSelect, setGenreSelect] = useState() //estado para generos 
     const [genreFilter, setGenreFilter] = useState([]); // Estado para las películas filtradas por género
 
 
    
-    useEffect(() => {
-      let genreFilter = allMovies.filter(movie => movie.genre_ids.includes(genreSelect));
-      console.log("filtrado", genreFilter);
-      setGenreFilter(genreFilter);
-      
-      // Puedes realizar otras acciones con genreFilter aquí si es necesario.
-    
-    }, [genreSelect, allMovies]); // Ahora se ejecutará cuando genreSelect o allMovies cambien
-    
-
-
+   //filtro
+   useEffect(() => {
+    let genreFilter = allMovies.filter(movie => movie.genre_ids.includes(genreSelect));
+    console.log("filtrado", genreFilter);
+    setGenreFilter(genreFilter);
+     
+    // Puedes realizar otras acciones con genreFilter aquí si es necesario.
+  
+  }, [genreSelect, allMovies]); // Ahora se ejecutará cuando genreSelect o allMovies cambien
+  
 
 
     useEffect(() => {
@@ -53,12 +52,23 @@ export default function Home() {
     }, []);// Usamos un arreglo vacío para que se ejecute solo una vez después de la renderización inicial
 
 
+    
+
+
+
+
+
      //función para manejar la busqueda
      const handleSearch = (valueTextUser) =>{
       console.log(valueTextUser)
       setSearchText(valueTextUser)
       console.log(searchText)
-      
+
+
+
+
+
+  
      console.log(valueTextUser)
     //actualiza el estado con peliculas filtradas
     if (valueTextUser === ""){
@@ -135,32 +145,38 @@ export default function Home() {
 
                 <SelectGenres setGenreSelect={setGenreSelect} />
 
-{/* Muestra las películas filtradas o el mensaje de "no se encontraron resultados" */}
-{genreFilter.length <= 0 ? (
-  <p>No se encontraron películas para este género.</p>
+{/* Muestra las películas filtradas */}
+{genreFilter.length > 0 ? (
+  <>
+    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+   <p>resultados de su busqueda: </p> 
+   {genreFilter.map((item) => (
+    <Card movie={item} key={item.id} />
+  ))}
+  <button onClick={onClickVerMas}>ver más</button>
+  </>
+
 ) : (
   <>
-    {genreFilter.map((item) => (
-      <Card movie={item} key={item.id} />
-    ))}
-    <button onClick={onClickVerMas}>ver más</button>
-  </>
-)}
-
-                <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+   <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
                 
                 
           
-              {allMovies.length <= 0 
-              ? <p>no se encontraron resultados</p> 
-              :  <>
-              {allMovies.map((item) => <Card movie={item} key={item.id}  />)}
-              <button onClick={onClickVerMas}>ver más</button> 
-              </>
-                            
+                {allMovies.length <= 0 
+                ? <p>no se encontraron resultados</p> 
+                :  <>
+                {allMovies.map((item) => <Card movie={item} key={item.id}  />)}
+                <button onClick={onClickVerMas}>ver más</button> 
+                </>
+                              
+  
+                }
+                
+   
+  </>
+)}
 
-              }
-              
+               
               
     </div>
      )}
