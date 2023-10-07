@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import SearchBar from '../components/SearchBar';
 import imageShowTuman from '../images/showtruman.jpg';
 import './home.css';
+import { SelectGenres } from "../components/SelectGenres";
 
 
 export default function Home() {
@@ -15,6 +16,23 @@ export default function Home() {
     const [searchText, setSearchText] = useState("") 
     const [searchResults, setSearchResults ] = useState([])  
     const [page, setPage] = useState(1)  //estado para paginación
+    const [genreSelect, setGenreSelect] = useState(0) //estado para generos 
+    const [genreFilter, setGenreFilter] = useState([]); // Estado para las películas filtradas por género
+
+
+   
+    useEffect(() => {
+      let genreFilter = allMovies.filter(movie => movie.genre_ids.includes(genreSelect));
+      console.log("filtrado", genreFilter);
+      setGenreFilter(genreFilter);
+      
+      // Puedes realizar otras acciones con genreFilter aquí si es necesario.
+    
+    }, [genreSelect, allMovies]); // Ahora se ejecutará cuando genreSelect o allMovies cambien
+    
+
+
+
 
     useEffect(() => {
         // Dentro de useEffect para que se ejecute después de la renderización
@@ -110,6 +128,25 @@ export default function Home() {
                   <br></br>¡Comienza a explorar ahora! 
                 </h2>
                 </div>
+
+
+
+
+
+                <SelectGenres setGenreSelect={setGenreSelect} />
+
+{/* Muestra las películas filtradas o el mensaje de "no se encontraron resultados" */}
+{genreFilter.length <= 0 ? (
+  <p>No se encontraron películas para este género.</p>
+) : (
+  <>
+    {genreFilter.map((item) => (
+      <Card movie={item} key={item.id} />
+    ))}
+    <button onClick={onClickVerMas}>ver más</button>
+  </>
+)}
+
                 <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
                 
                 

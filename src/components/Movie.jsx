@@ -102,13 +102,15 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <p className="overviewMovie">{state.overview}    </p>
  
  {/* Botón para mostrar/ocultar el trailer */}
- <button className="toggleTrailerButton" onClick={toggleTrailer}>
+ <button className="toggleTrailerButton" onClick={toggleTrailer} >
       {showTrailer ? 'Ocultar Trailer' : 'Mostrar Trailer'}
       
     </button>
 
+   <div className="modalYoutube">
     {/* Mostrar el trailer si showTrailer es verdadero */}
     {showTrailer && <YouTube videoId={trailerKey}  className="youtube-video" />}
+    </div>
     
   </div>
    

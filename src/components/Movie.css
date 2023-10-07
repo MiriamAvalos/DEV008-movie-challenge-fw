@@ -84,7 +84,14 @@ color: rgb(19, 22, 85);
     margin-top: 700px;
 }
 
+.modalYoutube{
+    display:flex;
+    width: 100px;
+    height: 100px;
+}
 .youtube-video{
     position: absolute;
-    margin-top: 600px;
+    margin-top: 200px;
+   
+    z-index: 3;
 }
