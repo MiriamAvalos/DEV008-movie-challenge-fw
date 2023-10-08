@@ -24,3 +24,8 @@ export function getPopularMovie (page =1) {
 
 
 
+
+
+
+
+

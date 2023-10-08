@@ -158,6 +158,7 @@ export default function Home() {
   <>
     <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
 
+
 {/* Agrega un botón o enlace para restablecer el filtro */}
 <button onClick={resetFilter}>Restablecer Filtro</button>
    <p>resultados de su busqueda: </p> 
