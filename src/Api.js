@@ -23,6 +23,15 @@ export function getPopularMovie (page =1) {
 
 
 
+ // Función para obtener series populares
+export function getPopularSeries(page = 1) {
+  return fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}&page=${page}&language=es`)
+    .then((response) => {
+      return response.json();
+    });
+}
+
+
 
 
 

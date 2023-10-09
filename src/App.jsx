@@ -17,12 +17,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Home />} />
-          
-          {/* <Route path="Peliculas" element={<Blogs />} />
+
+           {/* <Route path="Peliculas" element={<Blogs />} />
           <Route path="Series" element={<Contact />} />
           <Route path="Detalles" element={<NoPage />} /> */}
+          
+          
+        
         </Route>
         <Route path="/movie-description" element={<Movie />}>
+           
+      
 
         </Route>
       </Routes>
