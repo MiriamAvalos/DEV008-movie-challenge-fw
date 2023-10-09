@@ -84,7 +84,8 @@ export default function Home() {
          
         //setAllMovies(allMovies);
               setAllMovies(response.results); //results es la propiedad del objeto response
-             // Agregamos un retraso artificial para que el indicador de carga sea visible
+              setGenreFilter([]);
+              // Agregamos un retraso artificial para que el indicador de carga sea visible
           setTimeout(() => {
               setLoading(false); // Cuando los datos se cargan, establece loading en false
             }, 700); // Retraso de tiempo
@@ -157,7 +158,7 @@ export default function Home() {
 {genreFilter.length > 0 ? (
   <>
     <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
-
+  
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
 <button onClick={resetFilter}>Restablecer Filtro</button>
@@ -179,15 +180,17 @@ export default function Home() {
                 
                 
           
-                {allMovies.length <= 0 
-                ? <p>no se encontraron resultados</p> 
-                :  <>
+{genreFilter.length === 0 && allMovies.length === 0 ? (
+  <p>No se encontraron resultados a su búsqueda</p>
+) :  <>
                 {allMovies.map((item) => <Card movie={item} key={item.id}  />)}
                 <button onClick={onClickVerMas}>ver más</button> 
                 </>
                               
   
                 }
+
+
                 
    
   </>

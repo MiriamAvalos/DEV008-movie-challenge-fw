@@ -4,20 +4,20 @@ const genres = [
     { genre_name: "Animación", id: 16 },
     { genre_name: "Comedia", id: 35 },
     { genre_name: "Crimen", id: 80 },
-    { genre_name: "Documentales", id: 99 },
+    /*{ genre_name: "Documentales", id: 99 },*/
     { genre_name: "Drama", id: 18 },
     { genre_name: "Familia", id: 10751 },
     { genre_name: "Fantasia", id: 14 },
     { genre_name: "Historia", id: 36 },
     { genre_name: "Terror", id: 27 },
-    { genre_name: "Musicales", id: 10402 },
+    /*{ genre_name: "Musicales", id: 10402 },*/
     { genre_name: "Misterio", id: 9648 },
     { genre_name: "Romance", id: 10749 },
     { genre_name: "Ciencia Ficción", id: 878 },
-    { genre_name: "Programas de Tv", id: 10770 },
+    /*{ genre_name: "Programas de Tv", id: 10770 },*/
     { genre_name: "Thriller", id: 53 },
     { genre_name: "Batallas", id: 10752 },
-    { genre_name: "Western", id: 37 }
+    /*{ genre_name: "Western", id: 37 }*/
   ]; 
 
 export function SelectGenres (props) {
