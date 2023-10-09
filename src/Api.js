@@ -11,9 +11,8 @@ export function getPopularMovie (page =1) {
 
 
 
+//función para  búsqueda de películas en la API
  export function searchAllMovies (text) {
- 
-
   return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${text}&language=en-US&page=1`)
   .then((response) => {
     return response.json()
