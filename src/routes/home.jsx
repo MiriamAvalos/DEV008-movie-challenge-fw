@@ -7,6 +7,7 @@ import SearchBar from '../components/SearchBar';
 import imageShowTuman from '../images/showtruman.jpg';
 import './home.css';
 import { SelectGenres } from "../components/SelectGenres";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
@@ -18,6 +19,10 @@ export default function Home() {
     const [page, setPage] = useState(1)  //estado para paginación
     const [genreSelect, setGenreSelect] = useState() //estado para generos 
     const [genreFilter, setGenreFilter] = useState([]); // Estado para las películas filtradas por género
+
+
+    const navigate = useNavigate()  //todos los hooks comienzan con "use", los hooks son funciones que nos retornan algo
+    
     
 
 
@@ -59,21 +64,11 @@ export default function Home() {
     }, []);// Usamos un arreglo vacío para que se ejecute solo una vez después de la renderización inicial
 
 
-    
- 
-   
-
-
-
-
      //función para manejar la busqueda
      const handleSearch = (valueTextUser) =>{
       console.log(valueTextUser)
       setSearchText(valueTextUser)
       console.log(searchText)
-
-
-
 
 
   
@@ -127,6 +122,14 @@ export default function Home() {
           });
     }
 
+
+
+    //funcion para navegar a series
+
+    const navigateToSeries = () => navigate("/series");
+
+
+
     return (
         <div>
           {loading ? (
@@ -152,7 +155,11 @@ export default function Home() {
 
 
 
-               
+                <div>
+      
+      {/* Enlace a la página de series */}
+      <button className= "navigateToSeries" onClick={navigateToSeries}> series </button>
+    </div>   
 
 {/* Muestra las películas filtradas */}
 {genreFilter.length > 0 ? (

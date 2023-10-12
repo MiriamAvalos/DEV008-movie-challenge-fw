@@ -4,47 +4,24 @@ import { useEffect, useState } from "react";
 import YouTube from 'react-youtube';
 import './Movie.css';
 
-
-
-
-
-
-
-
-
-  
+ 
 
 export function Movie() {
     const {state} = useLocation()  //useLocation devuelve todas las opciones del componente al que navegamos
     //console.log(state)
+    const Navigate = useNavigate()  //todos los hooks comienzan con "use", los hooks son funciones que nos retornan algo
     const imageBackdropPath = "https://image.tmdb.org/t/p/w1280" + state.backdrop_path
     const imagePosterPath = "https://image.tmdb.org/t/p/w1280"  + state.poster_path
     const [showTrailer, setShowTrailer] = useState(false);   //estado que controla si el trailer se mostrara o no se mostrara 
     const [trailerKey, setTrailerKey] = useState(null); // Estado para almacenar el trailerKey
      
-
     
-    const Navigate = useNavigate()  //todos los hooks comienzan con "use", los hooks son funciones que nos retornan algo
     function closeDescription() {
     //la función Navigate la puedo utilizar para dirigirme a otro lado
     
      Navigate("/")  //redirigir a Home 
-     
         
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     useEffect(() => {

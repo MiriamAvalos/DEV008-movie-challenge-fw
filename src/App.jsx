@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   BrowserRouter,
   Route,
@@ -8,6 +8,7 @@ import {
 import './App.css';
 import Home from "./routes/home";
 import { Movie } from "./components/Movie";
+import Series from "./routes/series";
 
 
 
@@ -16,15 +17,16 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
+          
+        </Route>
+             {/* Ruta para las series populares */}
+        <Route path="/series" element={<Series />} />
 
            {/* <Route path="Peliculas" element={<Blogs />} />
           <Route path="Series" element={<Contact />} />
           <Route path="Detalles" element={<NoPage />} /> */}
-          
-          
+         
         
-        </Route>
         <Route path="/movie-description" element={<Movie />}>
            
       
