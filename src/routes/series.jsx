@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
-import {getPopularSeries} from "../Api";
+import {getPopularSeries, searchAllSeries} from "../Api";
 import Card from "../components/Card";
 import './series.css';
 import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+
+
 
 
 export default function Series() {
     //variables de estado
     const [allSeries, setAllSeries] = useState([]); //todas las series
     const [page, setPage] = useState(1)  //estado para paginación
+    const [searchText, setSearchText] = useState("") //estado para la busqueda 
+    const [searchResults, setSearchResults ] = useState([])  
     console.log("paginas", page)
 
 
@@ -31,7 +36,7 @@ export default function Series() {
 
 
 
-   //paginción
+   //paginación
    const onClickVerMasSeries = () => {
     getPopularSeries( page+1).then((response) => {
        const seriesAntiguas = [...allSeries, ...response.results] //
@@ -48,6 +53,40 @@ export default function Series() {
         });
     }
 
+
+
+     //función para manejar la busqueda
+     const handleSearch = (valueTextUser) =>{
+        console.log(valueTextUser)
+        setSearchText(valueTextUser)
+        console.log(searchText)
+  
+  
+    
+       console.log(valueTextUser)
+      //actualiza el estado con peliculas filtradas
+      if (valueTextUser === ""){
+        getPopularSeries().then((response) => {
+           
+          //setAllMovies(allMovies);
+                setAllSeries(response.results); //results es la propiedad del objeto response
+                
+            })
+                //console.log("series", response.results);
+            
+            .catch((error) => {
+                console.error("Error al obtener los datos:", error);
+            });
+      } else{
+        searchAllSeries(searchText).then((response) => { 
+      setAllSeries(response.results)
+           console.log(searchResults)
+      }
+        )
+  
+        }
+      }
+
   
 
 
@@ -55,6 +94,7 @@ export default function Series() {
     return (
                 <div>
                     <Header />
+                    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
       
                 {allSeries.map((item) => (
                 <Card movie={item} key={item.id}  />

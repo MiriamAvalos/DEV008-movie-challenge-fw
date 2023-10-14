@@ -19,8 +19,8 @@ export function Movie() {
     function closeDescription() {
     //la función Navigate la puedo utilizar para dirigirme a otro lado
     
-     Navigate("/")  //redirigir a Home 
-        
+     Navigate(-1)  //redirigir a Home 
+     
     }
 
 

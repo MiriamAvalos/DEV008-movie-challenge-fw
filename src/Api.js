@@ -30,9 +30,13 @@ export function getPopularSeries(page = 1) {
       return response.json();
     });
 }
-
-
-
+// Función para búsqueda de series en la API
+export function searchAllSeries(text) {
+  return fetch(`https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${text}&language=en-US&page=1`)
+    .then((response) => {
+      return response.json();
+    });
+}
 
 
 
