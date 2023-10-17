@@ -25,7 +25,7 @@ export default function SearchBar(props) {
     return (
        <div className='contentSearchBar'>
 
-      <input type="text" placeholder="Buscar una película..." className="inputSearchMovies" onChange={event=>handleChange(event)} value={searchValue} />
+      <input type="text" placeholder="Buscar..." className="inputSearchMovies" onChange={event=>handleChange(event)} value={searchValue} />
       
       <img src={imageBusqueda} onClick={handleClick} className='imageSearch' />
       

@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     margin:2px;
-  margin-top: 15px;
+  margin-top: 20px;
     
 }
 
@@ -23,13 +23,20 @@
   font-size: 14px;
   outline: none;
   font-family:  'Gilroy-Light';
+  
+
+}
+.inputSearchMovies::placeholder{
+  text-indent: 30px;
 }
 
+
+
 .imageSearch{
+  position:absolute;
  width:18px;
- position:absolute;
- right: 100px;
  cursor: pointer;
+ right: 265px;
  
 
 }
