@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from 'react';
 import {getPopularMovie, searchAllMovies } from "../Api";
 import Header from '../components/Header';
 import Card from "../components/Card";
@@ -181,7 +182,9 @@ export default function Home() {
 {genreFilter.length === 0 && allMovies.length === 0 ? (
   <p>No se encontraron resultados a su búsqueda</p>
 ) :  <>
-                {allMovies.map((item) => <Card movie={item} key={item.id}  />)}
+                {React.Children.toArray(allMovies.map((item) => (
+                <Card movie={item}  />
+                )))}
                 <button onClick={onClickVerMas}>ver más</button> 
                 </>
                               
