@@ -1,19 +1,13 @@
 import './Header.css';
 import imageMenuToggle from '../images/menu.png';
 import cross from '../images/cross.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 
 import imageHeader from '../images/icon-movie.png';
 
 export default function Header() {
     const navigate = useNavigate()  //todos los hooks comienzan con "use", los hooks son funciones que nos retornan algo
 
-       //función para navegar a series
-       const navigateToSeries = () => navigate("/series");
-
-       //función para navegar a peliculas
-
-       const navigateToMovies = () => navigate("/");
     
 
    
@@ -28,8 +22,8 @@ export default function Header() {
               <img src={imageMenuToggle}  className='imageMenuToggle icons' />
               <img src={cross} className='cross icons' />
               <ul className='menu'>
-                  <li onClick={navigateToMovies}><a>Peliculas</a></li>
-                  <li onClick={navigateToSeries}><a>Series</a></li>
+                  <li><Link to="/">Peliculas</Link></li>
+                  <li><Link to="series">Series</Link></li>
               </ul>
 
           </nav>
