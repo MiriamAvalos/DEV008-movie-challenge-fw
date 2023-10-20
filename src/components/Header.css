@@ -41,7 +41,7 @@
 .imageHeader{
     position: absolute;
      width: 50px;
-    right: 260px;
+    right: 270px;
     top:7px;   
     z-index: 2;
 }
