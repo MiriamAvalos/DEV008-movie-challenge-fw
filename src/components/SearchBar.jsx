@@ -21,13 +21,16 @@ export default function SearchBar(props) {
         props.handleSearch()
     }
 
+
+    
+
     
     return (
        <div className='contentSearchBar'>
 
-      <input type="text" placeholder="Buscar..." className="inputSearchMovies" onChange={event=>handleChange(event)} value={searchValue} />
+      <input type="text" placeholder="Buscar..." className="inputSearchMovies" id="searchInput" onChange={event=>handleChange(event)} value={searchValue} />
       
-      <img src={imageBusqueda} onClick={handleClick} className='imageSearch' />
+      <img src={imageBusqueda} onClick={handleClick} className='imageSearch' id="searchIcon" />
       
        </div>
 
