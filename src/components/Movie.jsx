@@ -73,10 +73,11 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
     <button className= "closeDescription" onClick={closeDescription}> Regresar </button>
    <img className= "imageBackdropPath"  src={imageBackdropPath}/>
    <img className= "imagePosterPath"  src={imagePosterPath}/>
-   <p className="titleMovieDescription">{state.original_title}    </p>
-   <p className="releaseDate">{state.release_date}    </p>
+   <p className="titleMovieDescription">{state.original_title || state.original_name}    </p>
+   <p className="releaseDate">{state.release_date || state.first_air_date}    </p>
    <p className="overviewTitle">  Vista general   </p>
    <p className="overviewMovie">{state.overview}    </p>
+
  
  {/* Botón para mostrar/ocultar el trailer */}
  <button className="toggleTrailerButton" onClick={toggleTrailer} >

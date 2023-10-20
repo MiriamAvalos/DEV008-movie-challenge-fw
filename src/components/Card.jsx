@@ -8,7 +8,7 @@ function Card(props) {
     function viewDescription() {
     //la función Navigate la puedo utilizar para dirigirme a otro lado
     
-     Navigate("/movie-description", {state:props.movie})  //se crea objeto estado para traer la pelicula, state es la propiedad para llevarse cosas 
+     Navigate("/description", {state:props.movie})  //se crea objeto estado para traer la pelicula, state es la propiedad para llevarse cosas 
      
         
     }

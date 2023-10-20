@@ -14,7 +14,7 @@ export default function Series() {
     const [page, setPage] = useState(1)  //estado para paginación
     const [searchText, setSearchText] = useState("") //estado para la busqueda 
     const [searchResults, setSearchResults ] = useState([])  
-    console.log("paginas", page)
+    //console.log("paginas", page)
 
 
     useEffect(() => {
@@ -24,15 +24,16 @@ export default function Series() {
          
       //setAllMovies(allMovies);
             setAllSeries(response.results); //results es la propiedad del objeto response
+            console.log("series", response.results);
            
         })
-            //console.log("peliculas", response.results);
+            
         
         .catch((error) => {
             console.error("Error al obtener los datos:", error);
         });
     }, []);// Usamos un arreglo vacío para que se ejecute solo una vez después de la renderización inicial
-
+     
 
 
 
@@ -87,31 +88,37 @@ export default function Series() {
         }
       }
 
-  
-
-
-
     return (
                 <div>
                     <Header />
                     <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
       
+
+                    {allSeries.length === 0 ? (
+  <p>No se encontraron resultados a su búsqueda</p>
+) :  <>
                 {allSeries.map((item) => (
                 <Card movie={item} key={item.id}  />
                 ))}
 
-<button onClick={onClickVerMasSeries}>ver más</button>
-    
-                </div>
+<button onClick={onClickVerMasSeries}>ver más</button> 
+                </>
                               
   
-                
-
-
-                
+                }
+                </div>
+                )
+                 
    
-    )
 }
+                
+
+
+                
+         
+                                
+    
+                
 
 
 

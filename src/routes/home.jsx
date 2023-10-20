@@ -48,6 +48,7 @@ export default function Home() {
          
       //setAllMovies(allMovies);
             setAllMovies(response.results); //results es la propiedad del objeto response
+            console.log("peliculas", response.results);
            // Agregamos un retraso artificial para que el indicador de carga sea visible
         setTimeout(() => {
             setLoading(false); // Cuando los datos se cargan, establece loading en false
@@ -171,7 +172,6 @@ export default function Home() {
 ) : (
   <>
    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
-   {/* Resto de tu código */}
    <SelectGenres setGenreSelect={setGenreSelect} />
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
@@ -184,6 +184,7 @@ export default function Home() {
 ) :  <>
                 {React.Children.toArray(allMovies.map((item) => (
                 <Card movie={item}  />
+          
                 )))}
                 <button onClick={onClickVerMas}>ver más</button> 
                 </>

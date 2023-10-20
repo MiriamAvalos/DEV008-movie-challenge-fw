@@ -27,7 +27,7 @@ function App() {
           <Route path="Detalles" element={<NoPage />} /> */}
          
         
-        <Route path="/movie-description" element={<Movie />}>
+        <Route path="/description" element={<Movie />}>
            
       
 
