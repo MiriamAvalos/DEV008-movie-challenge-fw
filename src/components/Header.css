@@ -43,6 +43,7 @@
      width: 50px;
     right: 260px;
     top:7px;   
+    z-index: 2;
 }
 
 
@@ -72,6 +73,7 @@
      top:10px;
      right: 12px;
     cursor: pointer;
+    z-index: 2;
  }
  
  .icons{
@@ -101,7 +103,7 @@
      color: rgb(11, 12, 26);
      font-family: 'Gilroy-ExtraBold';
      font-size: 20px;
-     
+     z-index: 2;
  }
  
  .menu li{
