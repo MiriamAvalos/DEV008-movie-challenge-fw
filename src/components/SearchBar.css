@@ -22,10 +22,10 @@
   border: 1px solid #f7f3f3;
   border-radius: 5px;
   font-size: 14px;
-  outline:none;
+  border: 1px solid rgba(128, 128, 128, 0.342);
   font-family:  'Gilroy-Light';
-  left: 168px;
-  z-index: 1;
+  left: 200px;
+  z-index: 1; 
  
 }
 .inputSearchMovies::placeholder{
@@ -39,9 +39,9 @@
 .imageSearch{
  position:absolute;
  z-index: 1;
- width:18px;
+ width:15px;
  cursor: pointer;
- left: 180px;
+ left: 215px;
 }
 
 .inputSearchMovies:not(:placeholder-shown) + .imageSearch {

@@ -128,6 +128,7 @@ export default function Home() {
 
     return (
         <div>
+
           {loading ? (
             // Muestra el componente de carga si loading es true
             <Loading />
@@ -173,11 +174,14 @@ export default function Home() {
   <>
    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
    <SelectGenres setGenreSelect={setGenreSelect} />
+  
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
-<button onClick={resetFilter}>Restablecer Filtro</button>
+<button className="resetFilter" onClick={resetFilter}>Restablecer Filtro</button>
+<h1 className="PeliculasPopularesTitle">Películas populares</h1>
+
                 
-                
+              
           
 {genreFilter.length === 0 && allMovies.length === 0 ? (
   <p>No se encontraron resultados a su búsqueda</p>

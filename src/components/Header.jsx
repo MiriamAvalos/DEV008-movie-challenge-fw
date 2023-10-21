@@ -22,8 +22,8 @@ export default function Header() {
               <img src={imageMenuToggle}  className='imageMenuToggle icons' />
               <img src={cross} className='cross icons' />
               <ul className='menu'>
-                  <li><Link to="/">Peliculas</Link></li>
-                  <li><Link to="series">Series</Link></li>
+                  <li><Link to="/">Películas populares</Link></li>
+                  <li><Link to="series">Series populares</Link></li>
               </ul>
 
           </nav>

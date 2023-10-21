@@ -1,3 +1,5 @@
+import './SelectGenres.css';
+
 const genres = [
     { genre_name: "Acción", id: 28 },
     { genre_name: "Aventura", id: 12 },
@@ -33,14 +35,15 @@ export function SelectGenres (props) {
  
 
     return (
-        
-        <select onChange={handleSelect}>
+        <div className="divSelectGenre">
+        <select className="selectGenre" onChange={handleSelect}>
+        <option value="">Seleccionar género</option> {/* Opción inicial */}
             
 
                {genres.map(genre => <option value={genre.id} key={genre.id}> {genre.genre_name} </option>) }
             
         </select>
-        
+        </div>
     )
 
 

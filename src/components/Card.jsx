@@ -18,9 +18,11 @@ function Card(props) {
   //console.log("titulo" , titulo);
     return (
         <div className= "DivCardMovie" onClick={viewDescription}> 
+          
             <img className= "imgMovie"  src={image}/>
             
         </div>
+        
        
     )
 }
