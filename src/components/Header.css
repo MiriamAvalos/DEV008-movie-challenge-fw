@@ -19,7 +19,8 @@
   }
 
 .DivHeader{
-    display:flex;
+    display: flex;
+    
 }
 .HeaderHome{
     background-color: rgb(11, 12, 26);

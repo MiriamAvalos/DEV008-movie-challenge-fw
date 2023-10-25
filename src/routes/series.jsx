@@ -4,6 +4,8 @@ import Card from "../components/Card";
 import './series.css';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
+import { SelectGenres } from "../components/SelectGenres";
+import React from 'react';
 
 
 
@@ -14,6 +16,8 @@ export default function Series() {
     const [page, setPage] = useState(1)  //estado para paginación
     const [searchText, setSearchText] = useState("") //estado para la busqueda 
     const [searchResults, setSearchResults ] = useState([])  
+    const [genreSelectSeries, setGenreSelectSeries] = useState() //estado para generos 
+    const [genreFilterSeries, setGenreFilterSeries] = useState([]); // Estado para las películas filtradas por género
     //console.log("paginas", page)
 
 
@@ -88,47 +92,80 @@ export default function Series() {
         }
       }
 
-    return (
-                <div>
-                    <Header />
-                    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
-      
-
-                    {allSeries.length === 0 ? (
-  <p>No se encontraron resultados a su búsqueda</p>
-) :  <>   
-  <h2 className="seriesPopularesTitle">Series populares</h2>
-                {allSeries.map((item) => (
-                <Card movie={item} key={item.id}  />
-                ))}
-
-<button className="viewMore" onClick={onClickVerMasSeries}>ver más</button> 
-                </>
-                              
+      //filtro
+   useEffect(() => {
+    let genreFilter = allSeries.filter(movie => movie.genre_ids.includes(genreSelectSeries));
+    console.log("filtrado", genreFilter);
+    setGenreFilterSeries(genreFilter);
+     
+    // Puedes realizar otras acciones con genreFilter aquí si es necesario.
   
-                }
-                </div>
-                )
-                 
-   
-}
-                
+  }, [genreSelectSeries, allSeries]); // Ahora se ejecutará cuando genreSelect o allMovies cambien
+
+   // Función para restablecer el filtro
+   const resetFilterSeries = () => {
+    setGenreSelectSeries(0); // Restablece el filtro de género a su estado inicial (0 o el valor que uses)
+    setSearchText(""); // Limpia el campo de búsqueda si es necesario
+  };
+  
+
+    return (
+      <div>
+         <Header />
 
 
-                
-         
-                                
-    
-                
+{/* Muestra las películas filtradas */}
+{genreFilterSeries.length > 0 ? (
+<>
+<SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
 
 
+{/* Agrega un botón o enlace para restablecer el filtro */}
+<SelectGenres setGenreSelect={setGenreSelectSeries} />
+<div className="contentResetFilter"> <button className="resetFilterSeries" onClick={resetFilterSeries}>Limpiar filtro</button> </div>
+<p className="seachText">Resultados de su busqueda: </p> 
+{genreFilterSeries.map((item) => (
+<Card movie={item} key={item.id} />
+))}
+<button className="viewMore" onClick={onClickVerMasSeries}>ver más</button>
+</>
+
+) : (
+<>
+<SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
+<SelectGenres setGenreSelect={setGenreSelectSeries} />
 
 
+{/* Agrega un botón o enlace para restablecer el filtro */}
+
+<h1 className="seriesPopularesTitle">Series populares</h1>
+
+            
+          
+      
+{genreFilterSeries.length === 0 && allSeries.length === 0 ? (
+<p>No se encontraron resultados a su búsqueda</p>
+) :  <>
+            {React.Children.toArray(allSeries.map((item) => (
+            <Card movie={item}  />
+      
+            )))}
+            <button className="viewMore" onClick={onClickVerMasSeries}>ver más</button> 
+            </>
+                          
+
+            }
 
 
+            
 
+</>
+)}
 
-
+           
+          
+</div>
+ )}
 
 
 
