@@ -102,7 +102,7 @@ export default function Series() {
                 <Card movie={item} key={item.id}  />
                 ))}
 
-<button onClick={onClickVerMasSeries}>ver más</button> 
+<button className="viewMore" onClick={onClickVerMasSeries}>ver más</button> 
                 </>
                               
   
