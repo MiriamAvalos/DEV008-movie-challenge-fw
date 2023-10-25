@@ -15,7 +15,7 @@
 .DivCardMovie{
     display:inline-flex; 
     margin:3px;
-    transform: translateY(30px);  /*mueve el contenedor hacia abajo*/
+    transform: translateY(10px);  /*mueve el contenedor hacia abajo*/
     
     
 }

@@ -94,6 +94,5 @@ color: rgb(19, 22, 85);
 .youtube-video{
     position: absolute;
     margin-top: 200px;
-   
     z-index: 3;
 }

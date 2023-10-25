@@ -96,7 +96,8 @@ export default function Series() {
 
                     {allSeries.length === 0 ? (
   <p>No se encontraron resultados a su búsqueda</p>
-) :  <>
+) :  <>   
+  <h2 className="seriesPopularesTitle">Series populares</h2>
                 {allSeries.map((item) => (
                 <Card movie={item} key={item.id}  />
                 ))}

@@ -148,12 +148,7 @@ export default function Home() {
                   <br></br>¡Comienza a explorar ahora! 
                 </h2>
                 </div>
-
-
-
-
-
-             
+        
 
 {/* Muestra las películas filtradas */}
 {genreFilter.length > 0 ? (
@@ -162,8 +157,9 @@ export default function Home() {
   
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
-<button onClick={resetFilter}>Restablecer Filtro</button>
-   <p>resultados de su busqueda: </p> 
+<SelectGenres setGenreSelect={setGenreSelect} />
+<div className="contentResetFilter"> <button className="resetFilter" onClick={resetFilter}>Limpiar filtro</button> </div>
+   <p className="seachText">Resultados de su busqueda: </p> 
    {genreFilter.map((item) => (
     <Card movie={item} key={item.id} />
   ))}
@@ -177,8 +173,8 @@ export default function Home() {
   
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
-<button className="resetFilter" onClick={resetFilter}>Restablecer Filtro</button>
-<h1 className="PeliculasPopularesTitle">Películas populares</h1>
+
+<h1 className="peliculasPopularesTitle">Películas populares</h1>
 
                 
               
