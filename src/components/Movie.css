@@ -18,8 +18,20 @@ display:flex;
 .closeDescription{
     position:absolute;
     z-index: 2;
-    left: 265px;
-    margin-top: 5px;
+    left: 290px;
+    margin-top: 9px;
+    width:90px;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 10px;
+    background-color: rgba(235, 185, 78, 0.932); 
+    color: #FFF; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer;
+    font-family: 'Gilroy-ExtraBold';
+    text-shadow: 1px 1px 0px #000;
     
 }
 .imageBackdropPath{
@@ -40,30 +52,87 @@ display:flex;
     z-index: 2;
 }
 
+.keyData{
+    position: absolute;
+   margin-top: 250px;
+  width:190px;
+ height: 200px;
+ left: 5px;
+ 
+}
+.nameDescription{
+    font-family: 'Gilroy-Light';
+    color:black;
+    
+
+}
+.fontStyle{
+    font-family: 'Gilroy-ExtraBold';
+   color:black;
+
+}
 .titleMovieDescription{
-position: absolute;
-font-family: 'Gilroy-ExtraBold';
-font-size: 20px;
-margin-top: 260px;
-left: 5px;
-color: rgb(19, 22, 85);
-text-align: left;
+    
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 20px;
+    margin: 0; /* Elimina el margen superior para un mejor ajuste */
+    color: rgb(19, 22, 85);
+    max-width: 100%;
 }
 
 .releaseDate{
     position:absolute;
-    font-family: 'Gilroy-Light';
-    margin-top: 295px;
-    left: 50px;
-    color: black;
+    margin-top: 20px;
+    right: 35px;
+   
 
 }
+
+.originalTitleMovieDescription{
+ position: absolute;
+ margin-top: 75px;
+ right: 35px;
+ 
+    
+    }
+
+    .languageMovieDescription{
+        position: absolute;
+        margin-top: 45px;
+        right: 45px;
+    }
+
+    .star{
+        width: 25px;
+        margin-top: 463px;
+        position: absolute;
+        right: 120px;
+       
+    }
+    
+    .scoreMovieDescription{
+        position: absolute;
+        margin-top: 463px;
+        right: 88px;
+        font-size: 19px;
+        font-family: 'Gilroy-ExtraBold';
+        color: rgb(19, 22, 85);
+    }
+.votesMovieDescription{
+    position: absolute;
+    margin-top: 490px;
+    right: 75px;
+    font-family: 'Gilroy-ExtraBold';
+    color: rgb(19, 22, 85);
+    font-size: 18px;
+}
+
 
 .overviewTitle{
 position: absolute;
 font-family: 'Gilroy-ExtraBold';
 font-size: 18px;
-margin-top: 480px;
+margin-top: 550px;
 text-align: left;
 left: 40px;
 color: rgb(19, 22, 85);
@@ -73,7 +142,7 @@ color: rgb(19, 22, 85);
 .overviewMovie{
     position: absolute;
     font-family: 'Gilroy-Light';
-    margin-top: 510px;
+    margin-top: 580px;
     text-align: left;
     font-size: 17px;
     left: 8px;
@@ -95,4 +164,13 @@ color: rgb(19, 22, 85);
     position: absolute;
     margin-top: 200px;
     z-index: 3;
+}
+
+
+
+
+
+.divOverViewMovie{
+    display:flex;
+   justify-content: center;
 }

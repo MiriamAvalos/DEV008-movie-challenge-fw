@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import YouTube from 'react-youtube';
 import './Movie.css';
+import star from '../images/star.png';
 
  
 
@@ -49,17 +50,6 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
   });
 }, [state.id]); // Asegúrate de que esta función se ejecute cuando cambia el ID de la película
 
-
-
-
-
-
-
-
-
-
-
-
     
     //funcion para mostrar trailer de youtube
     function toggleTrailer() {
@@ -73,10 +63,26 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
     <button className= "closeDescription" onClick={closeDescription}> Regresar </button>
    <img className= "imageBackdropPath"  src={imageBackdropPath}/>
    <img className= "imagePosterPath"  src={imagePosterPath}/>
-   <p className="titleMovieDescription">{state.original_title || state.original_name}    </p>
-   <p className="releaseDate">{state.release_date || state.first_air_date}    </p>
+   <div className="keyData">
+   <p className="titleMovieDescription">{state.name || state.title} </p> 
+   
+    
+   <p className="releaseDate fontStyle">Estreno: <span className="nameDescription">{state.release_date || state.first_air_date}  </span>  </p>
+   <p className="originalTitleMovieDescription fontStyle">Titulo original: <span className="nameDescription">{ state.original_title || state.original_name}</span> </p>
+   <p className="languageMovieDescription fontStyle">Idioma original: <span className="nameDescription">{state.original_language}</span> </p>
+   
+   
+    
+    
+   </div>
+  <img src={star} className='star' />
+   <p className="scoreMovieDescription"> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1][0]}
+    </p>
+    <p className="votesMovieDescription ">votos: {state.vote_count}</p>
+   <div className="divOverViewMovie">
    <p className="overviewTitle">  Vista general   </p>
    <p className="overviewMovie">{state.overview}    </p>
+   </div>
 
  
  {/* Botón para mostrar/ocultar el trailer */}

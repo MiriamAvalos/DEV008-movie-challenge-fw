@@ -111,13 +111,12 @@ export default function Series() {
   
 
     return (
-      <div className="divSeries" >
+      <div>
         
          <Header />
          
          <div className="contentImageHeader">
-                <img src={imageShowTuman} className='imageShowTrumanSeries' />
-                
+                <img src={imageShowTuman} className='imageShowTrumanSeries' /> 
                 </div>
 
 
