@@ -82,22 +82,29 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <div className="divOverViewMovie">
    <p className="overviewTitle">  Vista general   </p>
    <p className="overviewMovie">{state.overview}    </p>
-   </div>
+   
 
  
- {/* Botón para mostrar/ocultar el trailer */}
- <button className="toggleTrailerButton" onClick={toggleTrailer} >
-      {showTrailer ? 'Ocultar Trailer' : 'Mostrar Trailer'}
-      
-    </button>
+   <div className="modalBackdrop"></div>
+<div className="modalWrapper">
+  <button className="toggleTrailerButton" onClick={toggleTrailer}>
+    {showTrailer ? '' : 'Trailer'}
+  </button>
 
-   <div className="modalYoutube">
+  <div className={`modalYoutube${showTrailer ? ' visible' : ''}`}>
     {/* Mostrar el trailer si showTrailer es verdadero */}
-    {showTrailer && <YouTube videoId={trailerKey}  className="youtube-video" />}
-    </div>
+    {showTrailer && (
+      <>
+        <YouTube videoId={trailerKey} className="youtube-video" />
+        <button className="hideTrailerButton" onClick={toggleTrailer}>Cerrar</button>
+      </>
+    )}
+  </div>
+</div>
     
   </div>
-   
+  </div>
+
   );
 
 }

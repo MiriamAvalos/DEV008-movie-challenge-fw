@@ -45,10 +45,10 @@ display:flex;
 
 .imagePosterPath{
     position: absolute;
-    left: 199px;
+    left: 200px;
     margin-top:210px;
-    width: 165px;
-    height: 245px;
+    width: 170px;
+    height: 250px;
     z-index: 2;
 }
 
@@ -127,14 +127,22 @@ display:flex;
     font-size: 18px;
 }
 
+.divOverViewMovie{
+
+position: absolute;
+margin-top: 40px;
+width:100%;
+right: 2px;
+}
+
 
 .overviewTitle{
 position: absolute;
 font-family: 'Gilroy-ExtraBold';
 font-size: 18px;
-margin-top: 550px;
+margin-top: 570px;
 text-align: left;
-left: 40px;
+left: 30px;
 color: rgb(19, 22, 85);
 
 }
@@ -142,7 +150,7 @@ color: rgb(19, 22, 85);
 .overviewMovie{
     position: absolute;
     font-family: 'Gilroy-Light';
-    margin-top: 580px;
+    margin-top: 605px;
     text-align: left;
     font-size: 17px;
     left: 8px;
@@ -150,27 +158,98 @@ color: rgb(19, 22, 85);
     color: black;
 }
 
+
+
+
+
 .toggleTrailerButton{
-    position: absolute;
-    margin-top: 700px;
+    position:absolute;
+    margin-top: 520px;
+    right: 245px;
+    width:110px;
+  height: 35px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 10px;
+  background-color: rgba(235, 185, 78, 0.932); 
+  color: #FFF; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  font-family: 'Gilroy-ExtraBold';
+  text-shadow: 1px 1px 0px #000;
 }
 
-.modalYoutube{
-    display:flex;
-    width: 100px;
-    height: 100px;
-}
-.youtube-video{
+.modalWrapper {
+    position: relative;
+    z-index: 2;
+    
+  }
+  
+  
+  .modalYoutube {
+    display:none;
     position: absolute;
-    margin-top: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+     z-index: 3;
+    
+  }
+  
+  .modalYoutube.visible {
+    display: flex;
+  flex-direction:column;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  border: 330px  solid rgb(2, 2, 7);
+   
+}
+  
+  .youtube-video { 
+    position: relative;
+    width: 100%; /* Establece el ancho al 100% para que se ajuste al contenedor */
+    max-width: 100%;
     z-index: 3;
+   right: 310px;  
+    
+  }
+  
+  .hideTrailerButton {
+    margin-top: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 10px;
+  background-color: rgba(235, 185, 78, 0.932); 
+  color: #FFF; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  font-family: 'Gilroy-ExtraBold';
+  text-shadow: 1px 1px 0px #000;
+  padding: 10px 20px;
+cursor: pointer;
+
+   
+  }
+
+  .modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+  z-index: 1; /* Asegúrate de que el fondo esté detrás del modal */
+  display: none; /* Inicialmente oculto */
 }
 
-
-
-
-
-.divOverViewMovie{
-    display:flex;
-   justify-content: center;
+.modalBackdrop.visible {
+  display: block; /* Muestra el fondo oscuro cuando el modal está abierto */
 }
