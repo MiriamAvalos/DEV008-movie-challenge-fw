@@ -7,12 +7,14 @@
 
 
 #root{
+    
     padding: 0px;
     display:flex;
     margin-top: 0px;
     
 }
 .DivCardMovie{
+    
     display:inline-flex; 
     margin:3px;
     transform: translateY(10px);  /*mueve el contenedor hacia abajo*/

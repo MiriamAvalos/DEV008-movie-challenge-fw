@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    
     box-sizing: border-box;
+   
 
 }
 
@@ -20,6 +22,9 @@
 
 .DivHeader{
     display: flex;
+  
+    
+   
     
 }
 .HeaderHome{
@@ -28,6 +33,7 @@
     height: 70px;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .titleApi{

@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import { SelectGenres } from "../components/SelectGenres";
 import React from 'react';
+import imageShowTuman from '../images/showtruman.jpg';
 
 
 
@@ -110,8 +111,14 @@ export default function Series() {
   
 
     return (
-      <div>
+      <div className="divSeries" >
+        
          <Header />
+         
+         <div className="contentImageHeader">
+                <img src={imageShowTuman} className='imageShowTrumanSeries' />
+                
+                </div>
 
 
 {/* Muestra las películas filtradas */}
@@ -162,10 +169,10 @@ export default function Series() {
 </>
 )}
 
-           
+
           
-</div>
- )}
-
-
-
+ 
+ 
+ </div>
+);
+}

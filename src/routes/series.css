@@ -11,9 +11,9 @@
 
 
 
-
 .contentResetFilter{
 display:flex;
+justify-content: center;
 
 
 }
@@ -71,3 +71,8 @@ margin-bottom: 40px;
 
 }
 
+.imageShowTrumanSeries{
+  margin-top: 2px;
+  width: 0%;  
+  
+}
