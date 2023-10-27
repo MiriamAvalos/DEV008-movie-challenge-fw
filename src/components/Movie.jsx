@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
-import YouTube from 'react-youtube';
 import './Movie.css';
 import star from '../images/star.png';
 
@@ -56,6 +55,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
       setShowTrailer(!showTrailer);
     }
     
+    console.log(trailerKey);
       
   return (
     <div className="divComponentMovie">
@@ -95,7 +95,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
     {/* Mostrar el trailer si showTrailer es verdadero */}
     {showTrailer && (
       <>
-        <YouTube videoId={trailerKey} className="youtube-video" />
+        <video width="320" height="240"> <source src={`https://youtu.be/${trailerKey}`} /> </video>
         <button className="hideTrailerButton" onClick={toggleTrailer}>Cerrar</button>
       </>
     )}
