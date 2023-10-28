@@ -85,7 +85,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    
 
  
-   <div className="modalBackdrop"></div>
+   
 <div className="modalWrapper">
   <button className="toggleTrailerButton" onClick={toggleTrailer}>
     {showTrailer ? '' : 'Trailer'}
@@ -95,8 +95,12 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
     {/* Mostrar el trailer si showTrailer es verdadero */}
     {showTrailer && (
       <>
-        <video width="320" height="240"> <source src={`https://youtu.be/${trailerKey}`} /> </video>
+        <div className="youtube-video"> 
+        <iframe src={`http://www.youtube.com/embed/${trailerKey}?rel=0`}
+          width="360" 
+          height="780"/> </div>
         <button className="hideTrailerButton" onClick={toggleTrailer}>Cerrar</button>
+       
       </>
     )}
   </div>
