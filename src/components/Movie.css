@@ -155,17 +155,29 @@ color: rgb(19, 22, 85);
     color: black;
 }
 
+.divToggleTrailerButton{
+  display:flex;
+  
+}
 
+.imagePlay{
+  position: absolute;
+  width: 17px;
+  z-index: 3;
+  margin-top: 519px;
+  left: 43px;
+
+}
 
 .toggleTrailerButton{
     position:absolute;
     margin-top: 510px;
     right: 245px;
-    width:110px;
+    width:114px;
   height: 35px;
   font-size: 22px;
   text-align: center;
-  line-height: 10px;
+  line-height: 9px;
   background-color: rgba(235, 185, 78, 0.932); 
   color: #FFF; 
   border: none; 
@@ -173,7 +185,10 @@ color: rgb(19, 22, 85);
   cursor: pointer;
   font-family: 'Gilroy-ExtraBold';
   text-shadow: 1px 1px 0px #000;
+  padding-right:2px;
+  letter-spacing:1px;
 }  
+
 
   .modalYoutube.visible { 
     display:flex;
