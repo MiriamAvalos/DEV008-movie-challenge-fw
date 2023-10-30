@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import './Movie.css';
 import star from '../images/star.png';
+import play from '../images/play.png';
 
  
 
@@ -87,10 +88,13 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
  
    
 <div className="modalWrapper">
-  <button className="toggleTrailerButton" onClick={toggleTrailer}>
+  <div className="divToggleTrailerButton">
+  <img src={play} className='imagePlay' />
+ <button className="toggleTrailerButton" onClick={toggleTrailer}>
+ 
     {showTrailer ? '' : 'Trailer'}
   </button>
-
+  </div>
   <div className={`modalYoutube${showTrailer ? ' visible' : ''}`}>
     {/* Mostrar el trailer si showTrailer es verdadero */}
     {showTrailer && (
