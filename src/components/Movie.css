@@ -206,6 +206,8 @@ color: rgb(19, 22, 85);
 }
   
   .youtube-video { 
+    display:flex;
+    align-items: center;
     margin-top: 40px;
     z-index: 3;
     
@@ -213,8 +215,8 @@ color: rgb(19, 22, 85);
   
   .hideTrailerButton {
     position: absolute;
-    margin-top: 8px;
-    right: 17px;
+    margin-top: 325px;
+    right: 43px;
   font-size: 16px;
   text-align: center;
   line-height: 10px;
