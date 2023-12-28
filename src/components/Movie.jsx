@@ -76,7 +76,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
     
    </div>
   <img src={star} className='star' />
-   <p className="scoreMovieDescription"> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1][0]}
+   <p className="scoreMovieDescription"> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1]}
     </p>
     <p className="votesMovieDescription ">votos: {state.vote_count}</p>
    <div className="divOverViewMovie">
@@ -93,7 +93,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
 
   <div className={`modalYoutube${showTrailer ? ' visible' : ''}`}>
     {/* Mostrar el trailer si showTrailer es verdadero */}
-    {showTrailer && (
+    {showTrailer && trailerKey && (
       <>
         <div className="youtube-video"> 
         <iframe src={`http://www.youtube.com/embed/${trailerKey}?rel=0`}
