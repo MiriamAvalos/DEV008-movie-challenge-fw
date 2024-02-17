@@ -1,258 +1,223 @@
-@font-face {
+  @font-face {
+      font-family: 'Gilroy-ExtraBold';
+      src: url('../fuentes/Gilroy-ExtraBold.otf');
+      
+    }
+
+    @font-face {
+      font-family: 'Gilroy-Light';
+      src: url('../fuentes/Gilroy-Light.otf');
+      
+    }
+  .divComponentMovie{
+  display:flex;
+    width: 100%;
+    flex-direction: column;
+    
+    
+  
+  }
+  .closeDescription{
+      margin-left: auto;
+      padding-left: 9px;
+      margin-top: 9px;
+      width:90px;
+      height: 35px;
+      text-align: center;
+      line-height: 10px;
+      background-color: rgba(235, 185, 78, 0.932); 
+      color: #FFF; 
+      border: none; 
+      border-radius: 10px; 
+      cursor: pointer;
+      font-family: 'Gilroy-ExtraBold';
+      text-shadow: 1px 1px 0px #000;  
+    letter-spacing:1px;
+    font-size: 16px;
+    
+  }
+  .imageBackdropPath{
+    position:absolute;
+      margin-top: 50px;
+      width: 100%;
+      height: 190px;
+      filter: brightness(0.8);
+      z-index: 1;
+  }
+
+  .imagePosterPath{
+      position: absolute;
+      left: 200px;
+      margin-top:210px;
+      width: 170px;
+      height: 250px;
+      z-index: 2;
+  } 
+
+  .keyData{
+      display:flex;
+      justify-content: center;
+    margin-top: 210px;
+    width:190px;
+    padding: 5px;
+  
+  
+  }
+  .titleMovieDescription{  
+    display:flex;
     font-family: 'Gilroy-ExtraBold';
-    src: url('../fuentes/Gilroy-ExtraBold.otf');
+    margin: 0; /* Elimina el margen superior para un mejor ajuste */
+    color: rgb(19, 22, 85);
+    max-width: 100%;
+  }
+  .nameDescription{
+      font-family: 'Gilroy-Light';
+      color:black;
+      
+
+  }
+  .fontStyle{
+      font-family: 'Gilroy-ExtraBold';
+    color:black;
+
+  }
+
+  .divInformation{
+    width: 190px;
+    padding:10px;
+    text-align: left;
+    }
+
+      .star{
+          width: 25px;
+          margin-top: 463px;
+          position: absolute;
+          right: 120px;
+        
+      }
+      
+      .scoreMovieDescription{
+          position: absolute;
+          margin-top: 463px;
+          right: 88px;
+          font-size: 19px;
+          font-family: 'Gilroy-ExtraBold';
+          color: rgb(19, 22, 85);
+      }
+  .votesMovieDescription{
+      position: absolute;
+      margin-top: 490px;
+      right: 75px;
+      font-family: 'Gilroy-ExtraBold';
+      color: rgb(19, 22, 85);
+      font-size: 18px;
+  }
+
+  .divOverViewMovie{
+  position: absolute;
+  margin-top: 40px;
+  width:100%;
+  right: 2px;
+  }
+
+
+  .overviewTitle{
+  position: absolute;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 18px;
+  margin-top: 570px;
+  text-align: left;
+  left: 30px;
+  color: rgb(19, 22, 85);
+
+  }
+
+  .overviewMovie{
+      position: absolute;
+      font-family: 'Gilroy-Light';
+      margin-top: 605px;
+      text-align: left;
+      font-size: 17px;
+      left: 8px;
+      padding: 1px;
+      color: black;
+
+  }
+
+  .divToggleTrailerButton{
+    display:flex;
+   
+    
     
   }
 
-  @font-face {
-    font-family: 'Gilroy-Light';
-    src: url('../fuentes/Gilroy-Light.otf');
-    
+  .imagePlay{
+    position: absolute;
+    width: 17px;
+    margin-top: 519px;
+    left: 40px;
+   
+   
+
   }
-.divComponentMovie{
-display:flex;
-  width: 100%;
-}
-.closeDescription{
-    position:absolute;
-    z-index: 2;
-    left: 290px;
-    margin-top: 9px;
-    width:90px;
+
+  .toggleTrailerButton{
+      margin-top: 510px;
+      width:114px;
     height: 35px;
-    font-size: 14px;
+    font-size: 22px;
+    line-height: 9px;
+    background-color: rgba(235, 185, 78, 0.932); 
+    color: #FFF; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-family: 'Gilroy-ExtraBold';
+    text-shadow: 1px 1px 0px #000;
+    letter-spacing:1px;
+    margin-left: 30px;
+    padding-left: 30px;
+    
+    
+    
+    
+  }  
+    .modalYoutube.visible { 
+      display:flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000e7;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+  }
+    
+    .youtube-video { 
+      margin-top: 40px;
+      z-index: 3;
+      
+    }
+    
+    .hideTrailerButton {
+      position: absolute;
+      margin-top: 8px;
+      right: 17px;
+    font-size: 16px;
     text-align: center;
     line-height: 10px;
     background-color: rgba(235, 185, 78, 0.932); 
     color: #FFF; 
     border: none; 
-    border-radius: 10px; 
+    border-radius: 5px; 
     cursor: pointer;
     font-family: 'Gilroy-ExtraBold';
     text-shadow: 1px 1px 0px #000;
-   z-index: 2;    
-}
-.imageBackdropPath{
-   position:absolute;
-    margin-top: 50px;
-    width: 100%;
-    height: 190px;
-    filter: brightness(0.8);
-    z-index: 1;
-}
-
-.imagePosterPath{
-    position: absolute;
-    left: 200px;
-    margin-top:210px;
-    width: 170px;
-    height: 250px;
-    z-index: 2;
-} 
-
-.keyData{
-    display:flex;
-    position: absolute; 
-    justify-content: center;
-   margin-top: 250px;
-  width:190px;
- height: 200px;
- padding: 5px;
- 
- 
-}
-.titleMovieDescription{  
-  display:flex;
-  font-family: 'Gilroy-ExtraBold';
-  font-size: 20px;
-  margin: 0; /* Elimina el margen superior para un mejor ajuste */
-  color: rgb(19, 22, 85);
-  max-width: 100%;
-}
-.nameDescription{
-    font-family: 'Gilroy-Light';
-    color:black;
-    
-
-}
-.fontStyle{
-    font-family: 'Gilroy-ExtraBold';
-   color:black;
-
-}
-
-
-
-.divInformation{
-  display: flex;
-  position: absolute; 
-  justify-content: center;
-  top:330px;
-  flex-direction: column;
-  left: 5px;
-  text-align: center;
- 
-
-  
-  
-
-  
-  
-  }
-.releaseDate{
-  display:flex;
-    margin-top: 30px;
-    right: 43px;
-   
-}
-.originalTitleMovieDescription{
-  margin-top: 150px;
-  position: absolute;
-  
-  
- 
-    }
-.nameDescription{
-  display:flex;
- margin-left: 4px;
-
- 
- 
-}
-    .languageMovieDescription{
-      display:flex;
-      margin-top: 10px;
-     
-    }
-
-    .star{
-        width: 25px;
-        margin-top: 463px;
-        position: absolute;
-        right: 120px;
-       
-    }
-    
-    .scoreMovieDescription{
-        position: absolute;
-        margin-top: 463px;
-        right: 88px;
-        font-size: 19px;
-        font-family: 'Gilroy-ExtraBold';
-        color: rgb(19, 22, 85);
-    }
-.votesMovieDescription{
-    position: absolute;
-    margin-top: 490px;
-    right: 75px;
-    font-family: 'Gilroy-ExtraBold';
-    color: rgb(19, 22, 85);
-    font-size: 18px;
-}
-
-.divOverViewMovie{
-position: absolute;
-margin-top: 40px;
-width:100%;
-right: 2px;
-}
-
-
-.overviewTitle{
-position: absolute;
-font-family: 'Gilroy-ExtraBold';
-font-size: 18px;
-margin-top: 570px;
-text-align: left;
-left: 30px;
-color: rgb(19, 22, 85);
-
-}
-
-.overviewMovie{
-    position: absolute;
-    font-family: 'Gilroy-Light';
-    margin-top: 605px;
-    text-align: left;
-    font-size: 17px;
-    left: 8px;
-    padding: 1px;
-    color: black;
-}
-
-.divToggleTrailerButton{
-  display:flex;
-  
-}
-
-.imagePlay{
-  position: absolute;
-  width: 17px;
-  z-index: 3;
-  margin-top: 519px;
-  left: 43px;
-
-}
-
-.toggleTrailerButton{
-    position:absolute;
-    margin-top: 510px;
-    right: 245px;
-    width:114px;
-  height: 35px;
-  font-size: 22px;
-  text-align: center;
-  line-height: 9px;
-  background-color: rgba(235, 185, 78, 0.932); 
-  color: #FFF; 
-  border: none; 
-  border-radius: 5px; 
+    padding: 8px 15px;
   cursor: pointer;
-  font-family: 'Gilroy-ExtraBold';
-  text-shadow: 1px 1px 0px #000;
-  padding-right:2px;
-  letter-spacing:1px;
-}  
-
-
-  .modalYoutube.visible { 
-    display:flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000e7;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-   
- 
-}
-  
-  .youtube-video { 
-    margin-top: 40px;
-    z-index: 3;
-    
-  }
-  
-  .hideTrailerButton {
-    position: absolute;
-    margin-top: 8px;
-    right: 17px;
-  font-size: 16px;
-  text-align: center;
-  line-height: 10px;
-  background-color: rgba(235, 185, 78, 0.932); 
-  color: #FFF; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer;
-  font-family: 'Gilroy-ExtraBold';
-  text-shadow: 1px 1px 0px #000;
-  padding: 8px 15px;
-cursor: pointer;
-z-index: 4; 
-  }
+  z-index: 4; 
+    }
 
   
