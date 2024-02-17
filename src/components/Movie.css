@@ -48,15 +48,26 @@ display:flex;
     width: 170px;
     height: 250px;
     z-index: 2;
-}
+} 
 
 .keyData{
-    position: absolute;
+    display:flex;
+    position: absolute; 
+    justify-content: center;
    margin-top: 250px;
   width:190px;
  height: 200px;
- left: 5px;
+ padding: 5px;
  
+ 
+}
+.titleMovieDescription{  
+  display:flex;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 20px;
+  margin: 0; /* Elimina el margen superior para un mejor ajuste */
+  color: rgb(19, 22, 85);
+  max-width: 100%;
 }
 .nameDescription{
     font-family: 'Gilroy-Light';
@@ -69,35 +80,49 @@ display:flex;
    color:black;
 
 }
-.titleMovieDescription{
-    
-    font-family: 'Gilroy-ExtraBold';
-    font-size: 20px;
-    margin: 0; /* Elimina el margen superior para un mejor ajuste */
-    color: rgb(19, 22, 85);
-    max-width: 100%;
-}
 
-.releaseDate{
-    position:absolute;
-    margin-top: 20px;
-    right: 35px;
-   
 
-}
 
-.originalTitleMovieDescription{
- position: absolute;
- margin-top: 75px;
- right: 35px;
+.divInformation{
+  display: flex;
+  position: absolute; 
+  justify-content: center;
+  top:330px;
+  flex-direction: column;
+  left: 5px;
+  text-align: center;
  
-    
-    }
 
+  
+  
+
+  
+  
+  }
+.releaseDate{
+  display:flex;
+    margin-top: 30px;
+    right: 43px;
+   
+}
+.originalTitleMovieDescription{
+  margin-top: 150px;
+  position: absolute;
+  
+  
+ 
+    }
+.nameDescription{
+  display:flex;
+ margin-left: 4px;
+
+ 
+ 
+}
     .languageMovieDescription{
-        position: absolute;
-        margin-top: 45px;
-        right: 45px;
+      display:flex;
+      margin-top: 10px;
+     
     }
 
     .star{

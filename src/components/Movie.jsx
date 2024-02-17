@@ -66,16 +66,17 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <img className= "imagePosterPath"  src={imagePosterPath}/>
    <div className="keyData">
    <p className="titleMovieDescription">{state.name || state.title} </p> 
+   </div>
    
-    
+    <div className="divInformation">
    <p className="releaseDate fontStyle">Estreno: <span className="nameDescription">{state.release_date || state.first_air_date}  </span>  </p>
    <p className="originalTitleMovieDescription fontStyle">Titulo original: <span className="nameDescription">{ state.original_title || state.original_name}</span> </p>
    <p className="languageMovieDescription fontStyle">Idioma original: <span className="nameDescription">{state.original_language}</span> </p>
-   
-   
-    
-    
    </div>
+   
+    
+    
+   
   <img src={star} className='star' />
    <p className="scoreMovieDescription"> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1]}
     </p>
