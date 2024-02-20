@@ -1,4 +1,10 @@
 {
+<<<<<<< HEAD
   "project": "movie-challenge-fw",
   "cohort": "DEV008"
 }
+=======
+    "project": "movie-challenge-fw",
+    "cohort": "DEV008"
+  }
+>>>>>>> master

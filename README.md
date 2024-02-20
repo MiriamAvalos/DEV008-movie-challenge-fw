@@ -567,4 +567,8 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [Fetch API](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
 
+<<<<<<< HEAD
 Trata de divertirte. ¡a empezar esta aventura 🎬!
+=======
+Trata de divertirte. ¡a empezar esta aventura 🎬!
+>>>>>>> master

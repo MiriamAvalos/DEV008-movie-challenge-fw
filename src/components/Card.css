@@ -1,0 +1,39 @@
+ *{
+    margin:0px;
+    box-sizing: border-box;
+    
+}
+
+
+
+#root{
+    
+    padding: 0px;
+    display:flex;
+    margin-top: 0px;
+    
+}
+.DivCardMovie{
+    
+    display:inline-flex; 
+    margin:3px;
+    transform: translateY(10px);  /*mueve el contenedor hacia abajo*/
+    
+    
+}
+
+.imgMovie{
+    margin:2px;
+    padding:3px;
+    width: 110px;
+    height: 165px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.imgMovie:hover {
+    transform: scale(1.05);
+}
+
+

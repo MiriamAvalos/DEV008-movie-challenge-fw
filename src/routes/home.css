@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fuentes/Gilroy-Light.otf');
+   
+  }
+  @font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: url('../fuentes/Gilroy-ExtraBold.otf');
+    
+  }
+  
+
+  .contentImageHeader{
+    display:flex;
+    justify-content: center;
+   
+    
+  }
+.imageShowTruman{
+    margin-top: 2px;
+    width: 100%;  
+}
+
+.welcome{
+    position: absolute;
+    margin-top: 20px;
+    left: 10px;
+    font-family: 'Gilroy-Light';
+    color: antiquewhite;
+    font-size: 30px;
+    
+}
+
+.description{
+    font-size: 24px;
+    margin-top: 70px;
+    font-family: 'Gilroy-Light';
+    position:absolute;
+    color: antiquewhite;
+    line-height: 1; 
+    text-align: left;
+    left: 10px;
+
+}
+
+.contentResetFilter{
+  display:flex;
+  
+
+}
+.resetFilter{
+  position: absolute;
+  left: 130px;
+  margin:0px;
+  margin-top: 30px;
+  width:120px;
+  height: 35px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 10px;
+  background-color: rgba(235, 185, 78, 0.932); 
+  color: #FFF; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  font-family: 'Gilroy-ExtraBold';
+  text-shadow: 1px 1px 0px #000;
+  
+
+}
+
+.peliculasPopularesTitle{
+  margin-top: 35px;
+  font-family: 'Gilroy-ExtraBold';
+  color:rgb(11, 12, 26);
+  font-size: 30px;
+}
+
+.seachText{
+  font-family: 'Gilroy-ExtraBold';
+  color:rgb(11, 12, 26);
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.viewMore{
+  position: absolute;
+  margin-top: 200px;
+  right: 140px;
+  width:120px;
+  height: 35px;
+ font-size: 14px;
+ text-align: center;
+ line-height: 10px;
+ background-color: rgba(235, 185, 78, 0.932); 
+ color: #FFF; 
+ border: none; 
+ border-radius: 5px; 
+ cursor: pointer;
+ font-family: 'Gilroy-ExtraBold';
+ text-shadow: 1px 1px 0px #000;
+ margin-bottom: 40px;
+ 
+}

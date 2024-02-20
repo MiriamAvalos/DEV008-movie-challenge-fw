@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url('../fuentes/Gilroy-Light.otf');
+  font-weight: normal; /* Puedes ajustar el peso de la fuente si es necesario */
+  font-style: normal; /* Puedes ajustar el estilo de la fuente si es necesario */
+}
+
+.contentSearchBar{
+  display:flex;
+  left: 40px;
+  align-items: center;
+  margin-top: 35px;
+  left: 100px;
+    
+}
+
+.inputSearchMovies{
+  position:absolute;
+  padding: 10px 10px 10px 30px;
+  width: 187px;
+  height: 34px;
+  border: 1px solid #f7f3f3;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  font-family:  'Gilroy-Light';
+  left: 175px;
+  z-index: 1; 
+ 
+}
+.inputSearchMovies::placeholder{
+  padding-left: 5px;
+}
+.inputSearchMovies:focus {
+  padding-left: 35px; /* Ajusta el valor de padding-left según tus necesidades */
+}
+
+
+.imageSearch{
+ position:absolute;
+ z-index: 1;
+ width:15px;
+ cursor: pointer;
+ left: 190px;
+}
+
+.inputSearchMovies:not(:placeholder-shown) + .imageSearch {
+  display: none;
+}
+
