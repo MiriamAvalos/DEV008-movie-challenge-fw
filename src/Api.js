@@ -1,5 +1,7 @@
+
 //se crea la función que llamara a la API
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = "85107dfeaa535d82ecd6bb0797f7ff46"
+//const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function getPopularMovie (page =1) { 
    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}&language=es`)
