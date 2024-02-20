@@ -35,11 +35,11 @@
     font-family: 'Gilroy-ExtraBold';
     font-size: 35px;
     margin-top: 17px;
+ 
 }
 
 .imageHeader{
-    position: absolute;
-    margin-right: 180px;
+    display:flex;
     width: 50px;  
     z-index: 2;
     
