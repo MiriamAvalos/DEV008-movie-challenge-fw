@@ -49,9 +49,9 @@
 
   .imagePosterPath{
       position: absolute;
-      left: 190px;
+      left: 195px;
       margin-top:210px;
-      width: 190px;
+      width: 185px;
       height: 270px;
       z-index: 2;
       padding: 5px;
