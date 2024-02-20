@@ -49,19 +49,20 @@
 
   .imagePosterPath{
       position: absolute;
-      left: 230px;
+      left: 190px;
       margin-top:210px;
-      width: 170px;
-      height: 250px;
+      width: 190px;
+      height: 270px;
       z-index: 2;
+      padding: 5px;
   } 
 
   .keyData{
       display:flex;
       justify-content: center;
-    margin-top: 210px;
-    width:230px;
-    padding: 5px;
+    margin-top: 208px;
+    width:195px;
+    padding: 8px;
   
   
   }
@@ -71,6 +72,7 @@
     margin: 0; /* Elimina el margen superior para un mejor ajuste */
     color: rgb(19, 22, 85);
     max-width: 100%;
+    font-size: 20px;
   }
   .nameDescription{
       font-family: 'Gilroy-Light';
@@ -85,9 +87,10 @@
   }
 
   .divInformation{
-    width: 230px;
-    padding:15px;
+    width: 176px;
+    margin-left: 14px;
     text-align: left;
+    
     }
 
     .movieRtings{
@@ -96,7 +99,7 @@
       justify-content: center;
       left: 210px;
       width: 150px;
-      margin-top: 5px; 
+      margin-top: 20px; 
       
     }
 
