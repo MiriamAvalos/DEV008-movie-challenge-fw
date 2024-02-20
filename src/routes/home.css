@@ -70,6 +70,7 @@
 }
 
 .peliculasPopularesTitle{
+  display:flex;
   margin-top: 35px;
   font-family: 'Gilroy-ExtraBold';
   color:rgb(11, 12, 26);
