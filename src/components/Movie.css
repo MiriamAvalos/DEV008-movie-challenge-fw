@@ -54,8 +54,8 @@
       height: 280px;
       z-index: 2;
       padding: 5px;
-      margin-left: 220px;
-     
+      margin-left: 210px;
+     margin-right: 10px;
       
   }
 
@@ -99,7 +99,7 @@
       display:flex;
       position: absolute;
       justify-content: center;
-      left: 240px;
+      left: 230px;
       width: 150px;
       margin-top: 30px; 
       
