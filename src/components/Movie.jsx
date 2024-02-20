@@ -76,11 +76,13 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    
     
     
-   
-  <img src={star} className='star' />
-   <p className="scoreMovieDescription"> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1]}
+   <div className="movieRtings">
+  
+   <p className="scoreMovieDescription"> <img src={star} className='star' /> {state.vote_average.toString().split('.')[0]}.{state.vote_average.toString().split('.')[1]}
     </p>
-    <p className="votesMovieDescription ">votos: {state.vote_count}</p>
+    <p className="votesMovieDescription ">Votos: {state.vote_count}</p>
+    </div>
+
    <div className="divOverViewMovie">
    <p className="overviewTitle">  Vista general   </p>
    <p className="overviewMovie">{state.overview}    </p>
