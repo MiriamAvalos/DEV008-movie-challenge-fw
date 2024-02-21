@@ -5,7 +5,7 @@ import './Movie.css';
 import star from '../images/star.png';
 import play from '../images/play.png';
 
- 
+
 
 export function Movie() {
     const {state} = useLocation()  //useLocation devuelve todas las opciones del componente al que navegamos
@@ -15,6 +15,14 @@ export function Movie() {
     const imagePosterPath = "https://image.tmdb.org/t/p/w1280"  + state.poster_path
     const [showTrailer, setShowTrailer] = useState(false);   //estado que controla si el trailer se mostrara o no se mostrara 
     const [trailerKey, setTrailerKey] = useState(null); // Estado para almacenar el trailerKey
+
+
+ //ordenamiento de fecha en día, mes y año
+    const releaseDate = state.release_date || state.first_air_date;
+// Separar la fecha en partes (año, mes, día)
+const [year, month, day] = releaseDate.split('-');
+// Rearrangemento de las partes de la fecha en el orden deseado (día, mes, año)
+const formattedDate = `${day}-${month}-${year}`;
      
     
     function closeDescription() {
@@ -68,9 +76,11 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <p className="titleMovieDescription">{state.name || state.title} </p> 
    </div>
    
+
+   
     <div className="divInformation">
     <p className="originalTitleMovieDescription fontStyle">Titulo original: <span className="nameDescription">{ state.original_title || state.original_name}</span> </p>
-   <p className="releaseDate fontStyle">Estreno: <span className="nameDescription">{state.release_date || state.first_air_date}  </span>  </p>
+   <p className="releaseDate fontStyle">Estreno: <span className="nameDescription">{formattedDate} </span>  </p>
    <p className="languageMovieDescription fontStyle">Idioma original: <span className="nameDescription">{state.original_language}</span> </p>
    </div>
    
