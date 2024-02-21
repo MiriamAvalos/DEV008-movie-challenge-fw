@@ -164,10 +164,7 @@
   }
 
   .divToggleTrailerButton{
-    display:flex;
-   
-    
-    
+    display:flex; 
   }
 
   .imagePlay{
@@ -175,9 +172,6 @@
     width: 17px;
     margin-top: 529px;
     left: 40px;
-   
-   
-
   }
 
   .toggleTrailerButton{
@@ -196,13 +190,8 @@
     letter-spacing:1px;
     margin-left: 30px;
     padding-left: 30px;
-    
-    
-    
-    
   }  
     .modalYoutube.visible { 
-      display:flex;
       position: fixed;
       top: 0;
       left: 0;

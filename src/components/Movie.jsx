@@ -76,15 +76,11 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <p className="titleMovieDescription">{state.name || state.title} </p> 
    </div>
    
-
-   
     <div className="divInformation">
     <p className="originalTitleMovieDescription fontStyle">Titulo original: <span className="nameDescription">{ state.original_title || state.original_name}</span> </p>
    <p className="releaseDate fontStyle">Estreno: <span className="nameDescription">{formattedDate} </span>  </p>
    <p className="languageMovieDescription fontStyle">Idioma original: <span className="nameDescription">{state.original_language}</span> </p>
    </div>
-   
-    
     
    <div className="movieRtings">
   
@@ -96,10 +92,7 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
    <div className="divOverViewMovie">
    <p className="overviewTitle">  Vista general   </p>
    <p className="overviewMovie">{state.overview}    </p>
-   
-
- 
-   
+      
 <div className="modalWrapper">
   <div className="divToggleTrailerButton">
   <img src={play} className='imagePlay' />
@@ -114,8 +107,8 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
       <>
         <div className="youtube-video"> 
         <iframe src={`https://www.youtube.com/embed/${trailerKey}?rel=0`}
-          width="360" 
-          height="780"
+          width="370" 
+          height="720"
           /> </div>
         <button className="hideTrailerButton" onClick={toggleTrailer}>Cerrar</button>
        
