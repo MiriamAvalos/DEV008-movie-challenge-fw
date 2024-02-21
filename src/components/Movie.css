@@ -13,15 +13,12 @@
   display:flex;
     width: 100%;
     flex-direction: column;
-    
-    
   
   }
   .closeDescription{
     z-index: 1;
       margin-left: auto;
-      padding-left: 9px;
-      margin-top: 9px;
+     margin-top: 9px;
       width:90px;
       height: 35px;
       text-align: center;
@@ -188,8 +185,8 @@
     font-family: 'Gilroy-ExtraBold';
     text-shadow: 1px 1px 0px #000;
     letter-spacing:1px;
-    margin-left: 30px;
-    padding-left: 30px;
+    margin-left: 27px;
+    padding-left: 25px;
   }  
     .modalYoutube.visible { 
       position: fixed;
