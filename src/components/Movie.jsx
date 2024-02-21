@@ -107,8 +107,9 @@ fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&append_to
       <>
         <div className="youtube-video"> 
         <iframe src={`https://www.youtube.com/embed/${trailerKey}?rel=0`}
-          width="370" 
-          height="720"
+          width="90%" 
+          height="100%"
+          
           /> </div>
         <button className="hideTrailerButton" onClick={toggleTrailer}>Cerrar</button>
        

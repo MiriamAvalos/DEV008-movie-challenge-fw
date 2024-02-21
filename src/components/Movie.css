@@ -205,16 +205,17 @@
   }
     
     .youtube-video { 
-      margin-top: 40px;
+      margin-top: 50px;
       z-index: 3;
       margin-bottom: 60px;
-      
+      width: 100%;
+      height: 90%;
     }
     
     .hideTrailerButton {
       letter-spacing: 1px;
       position: absolute;
-      margin-top: 8px;
+      margin-top: 12px;
       right: 17px;
     font-size: 16px;
     text-align: center;
