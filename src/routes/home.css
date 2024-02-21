@@ -9,16 +9,25 @@
     
   }
   
+  .generalContent{
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+   
+  }
+
 
   .contentImageHeader{
     display:flex;
     justify-content: center;
+    
    
     
   }
 .imageShowTruman{
     margin-top: 2px;
-    width: 100%;  
+    width: 100%; 
+   
 }
 
 .welcome{
@@ -28,7 +37,6 @@
     font-family: 'Gilroy-Light';
     color: antiquewhite;
     font-size: 30px;
-    
 }
 
 .description{
@@ -40,9 +48,19 @@
     line-height: 1; 
     text-align: left;
     left: 10px;
-
 }
 
+
+.divSearchGenre{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+background-color: black;
+padding-top: 15px;
+padding-bottom: 15px;
+
+
+}
 .contentResetFilter{
   display:flex;
   

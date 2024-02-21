@@ -7,13 +7,14 @@
 .divSelectGenre{
     display:flex;
     align-items: center;
-    margin: 0px;
+    background-color: yellow; 
+    
 }
 
 
 .selectGenre{
-    position: absolute;
-    left: 20px;
+    margin:10px;
+    display:flex;
     width: 140px;
     height: 34px;
     border: 1px solid rgba(128, 128, 128, 0.342);

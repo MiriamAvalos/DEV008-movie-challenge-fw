@@ -120,12 +120,6 @@ export default function Home() {
           });
     }
 
-
-
- 
-
-
-
     return (
         <div>
 
@@ -134,7 +128,7 @@ export default function Home() {
             <Loading />
           ) : (
             // Muestra la lista de películas si loading es false
-            <div>
+            <div className="generalContent" >
              
 
                 <Header />
@@ -153,11 +147,13 @@ export default function Home() {
 {/* Muestra las películas filtradas */}
 {genreFilter.length > 0 ? (
   <>
+  <div className="divSearchGenre">
+  <SelectGenres setGenreSelect={setGenreSelect} />
     <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
-  
+
+</div>
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
-<SelectGenres setGenreSelect={setGenreSelect} />
 <div className="contentResetFilter"> <button className="resetFilter" onClick={resetFilter}>Limpiar filtro</button> </div>
    <p className="seachText">Resultados de su busqueda: </p> 
    {genreFilter.map((item) => (
@@ -168,8 +164,11 @@ export default function Home() {
 
 ) : (
   <>
-   <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
-   <SelectGenres setGenreSelect={setGenreSelect} />
+     <div className="divSearchGenre">
+  <SelectGenres setGenreSelect={setGenreSelect} />
+    <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch} />
+
+</div>
   
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
