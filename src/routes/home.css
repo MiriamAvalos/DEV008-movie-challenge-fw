@@ -15,14 +15,10 @@
     width: 100%;
    
   }
-
-
   .contentImageHeader{
     display:flex;
     justify-content: center;
-    
-   
-    
+     
   }
 .imageShowTruman{
     margin-top: 2px;
@@ -36,11 +32,11 @@
     left: 10px;
     font-family: 'Gilroy-Light';
     color: antiquewhite;
-    font-size: 30px;
+    font-size: 200%;
 }
 
 .description{
-    font-size: 24px;
+    font-size: 150%;
     margin-top: 70px;
     font-family: 'Gilroy-Light';
     position:absolute;
