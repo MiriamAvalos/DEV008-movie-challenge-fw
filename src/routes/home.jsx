@@ -159,7 +159,7 @@ export default function Home() {
    {genreFilter.map((item) => (
     <Card movie={item} key={item.id} />
   ))}
-  <button className="viewMore" onClick={onClickVerMas}>ver más</button>
+  <button className="viewMore" onClick={onClickVerMas}>Ver más</button>
   </>
 
 ) : (
@@ -185,7 +185,7 @@ export default function Home() {
                 <Card movie={item}  />
           
                 )))}
-                <button className="viewMore" onClick={onClickVerMas}>ver más</button> 
+                <button className="viewMore" onClick={onClickVerMas}>Ver más</button> 
                 </>
                               
   

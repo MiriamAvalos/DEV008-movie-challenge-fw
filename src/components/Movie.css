@@ -29,7 +29,7 @@
       border-radius: 10px; 
       cursor: pointer;
       font-family: 'Gilroy-ExtraBold';
-      text-shadow: 1px 1px 0px #000;  
+      text-shadow: 1px 1px 1px #000;
     letter-spacing:1px;
     font-size: 16px;
     margin-right: 10px;
@@ -183,7 +183,7 @@
     border-radius: 5px; 
     cursor: pointer;
     font-family: 'Gilroy-ExtraBold';
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 1px 1px 1px #000;
     letter-spacing:1px;
     margin-left: 27px;
     padding-left: 25px;

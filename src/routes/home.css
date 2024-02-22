@@ -76,7 +76,7 @@ padding-bottom: 15px;
   margin-top: 30px;
   width:120px;
   height: 35px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   line-height: 10px;
   background-color: rgba(235, 185, 78, 0.932); 
@@ -85,7 +85,8 @@ padding-bottom: 15px;
   border-radius: 5px; 
   cursor: pointer;
   font-family: 'Gilroy-ExtraBold';
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 1px 1px 1px #000;
+  letter-spacing:1px;
   
 
 }
@@ -109,7 +110,7 @@ padding-bottom: 15px;
   right: 140px;
   width:120px;
   height: 35px;
- font-size: 14px;
+ font-size: 17px;
  text-align: center;
  line-height: 10px;
  background-color: rgba(235, 185, 78, 0.932); 
@@ -118,7 +119,8 @@ padding-bottom: 15px;
  border-radius: 5px; 
  cursor: pointer;
  font-family: 'Gilroy-ExtraBold';
- text-shadow: 1px 1px 0px #000;
  margin-bottom: 40px;
+ text-shadow: 1px 1px 1px #000;
+ letter-spacing:1px;
  
 }

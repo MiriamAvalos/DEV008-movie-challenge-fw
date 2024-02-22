@@ -130,12 +130,12 @@ return (
 <SearchBar value={searchText} handleChange={setSearchText} handleSearch={handleSearch}/>
 
 </div>
-<div className="contentResetFilter"> <button className="resetFilterSeries" onClick={resetFilterSeries}>Limpiar filtro</button> </div>
+<div className="contentResetFilter"> <button className="resetFilter" onClick={resetFilterSeries}>Limpiar filtro</button> </div>
 <p className="seachText">Resultados de su busqueda: </p> 
 {genreFilterSeries.map((item) => (
 <Card movie={item} key={item.id} />
 ))}
-<button className="viewMore" onClick={onClickVerMasSeries}>ver más</button>
+<button className="viewMore" onClick={onClickVerMasSeries}>Ver más</button>
 </>
 
 ) : (
@@ -161,7 +161,7 @@ return (
         <Card movie={item}  />
   
         )))}
-        <button className="viewMore" onClick={onClickVerMasSeries}>ver más</button> 
+        <button className="viewMore" onClick={onClickVerMasSeries}>Ver más</button> 
         </>
                       
 
