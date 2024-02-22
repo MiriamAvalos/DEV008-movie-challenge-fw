@@ -16,34 +16,42 @@
    
   }
   .contentImageHeader{
-    display:flex;
-    justify-content: center;
+    display: flex;
+    position: relative;
+    width: 100%; 
+   
      
   }
 .imageShowTruman{
+  display: block;
     margin-top: 2px;
     width: 100%; 
+    position: relative;
    
 }
 
 .welcome{
-    position: absolute;
-    margin-top: 20px;
-    left: 10px;
+    position:absolute;
+    margin-top: 15px;
     font-family: 'Gilroy-Light';
     color: antiquewhite;
-    font-size: 200%;
+    font-size: 8.5vw;
+    margin-left: 12px;
+    
 }
 
-.description{
-    font-size: 150%;
-    margin-top: 70px;
+.description{ 
+  position:absolute;
+  top: calc(6vw + 6vw + 6vw);
+  font-size: 5.8vw;
     font-family: 'Gilroy-Light';
     position:absolute;
     color: antiquewhite;
     line-height: 1; 
     text-align: left;
-    left: 10px;
+    margin-left: 12px;
+    line-height: 1.1;
+   
 }
 
 
