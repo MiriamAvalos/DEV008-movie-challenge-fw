@@ -20,9 +20,9 @@ export function Movie() {
  //ordenamiento de fecha en día, mes y año
     const releaseDate = state.release_date || state.first_air_date;
 // Separar la fecha en partes (año, mes, día)
-const [year, month, day] = releaseDate.split('-');
+const [year] = releaseDate.split('-');
 // Rearrangemento de las partes de la fecha en el orden deseado (día, mes, año)
-const formattedDate = `${day}-${month}-${year}`;
+const formattedDate = `${year}`;
      
     
     function closeDescription() {
