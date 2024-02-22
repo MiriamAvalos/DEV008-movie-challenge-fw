@@ -131,7 +131,7 @@ return (
 
 </div>
 <div className="contentResetFilter"> <button className="resetFilter" onClick={resetFilterSeries}>Limpiar filtro</button> </div>
-<p className="seachText">Resultados de su busqueda: </p> 
+<p className="seachText">Resultados de su búsqueda: </p> 
 {genreFilterSeries.map((item) => (
 <Card movie={item} key={item.id} />
 ))}
@@ -149,7 +149,7 @@ return (
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
 
-<h1 className="seriesPopularesTitle">Series populares</h1>
+<h1 className="seriesPopularesTitle">Series Populares</h1>
 
         
       

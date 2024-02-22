@@ -155,7 +155,7 @@ export default function Home() {
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
 <div className="contentResetFilter"> <button className="resetFilter" onClick={resetFilter}>Limpiar filtro</button> </div>
-   <p className="seachText">Resultados de su busqueda: </p> 
+   <p className="seachText">Resultados de su búsqueda: </p> 
    {genreFilter.map((item) => (
     <Card movie={item} key={item.id} />
   ))}
@@ -173,7 +173,7 @@ export default function Home() {
 
 {/* Agrega un botón o enlace para restablecer el filtro */}
 
-<h1 className="peliculasPopularesTitle">Películas populares</h1>
+<h1 className="peliculasPopularesTitle">Películas Populares</h1>
 
                 
               
