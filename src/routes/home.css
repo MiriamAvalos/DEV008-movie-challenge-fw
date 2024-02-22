@@ -71,7 +71,6 @@ padding-bottom: 15px;
 }
 .resetFilter{
   position: absolute;
-  left: 130px;
   margin:0px;
   margin-top: 20px;
   width:120px;
@@ -107,7 +106,7 @@ padding-bottom: 15px;
 .viewMore{
   position: absolute;
   margin-top: 200px;
-  right: 140px;
+  right: 150px;
   width:120px;
   height: 35px;
  font-size: 17px;
